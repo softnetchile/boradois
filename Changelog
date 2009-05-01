@@ -1,4 +1,10 @@
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
+* For some unknown reason the Umbrello file wasn't openning here. I took a file that
+Suzana sent me and replaced the old one.
+* Modified db scrips. It's more organized now. Remember to change 'iuri' in
+createDatabase to the your database user.
+
+2009-05-01 Iuri Fernandes <iurifq@gmail.com>
 * Changed database configuration file config/database.yml.
 
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
