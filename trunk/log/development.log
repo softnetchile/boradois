@@ -147,3 +147,188 @@ c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
 Rendering template within layouts/hospedes
 Rendering hospedes/index
 Completed in 0.03308 (30 reqs/sec) | Rendering: 0.00363 (10%) | DB: 0.00280 (8%) | 200 OK [http://localhost/hospedes]
+
+
+Processing ServicosController#index (for 127.0.0.1 at 2009-05-01 14:52:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"index", "controller"=>"servicos"}
+  [4;35;1mServico Load (0.185712)[0m   [0mSELECT * FROM `servicos` [0m
+Rendering template within layouts/servicos
+Rendering servicos/index
+Completed in 0.19679 (5 reqs/sec) | Rendering: 0.00342 (1%) | DB: 0.18571 (94%) | 200 OK [http://localhost/servicos]
+
+
+Processing ServicosController#index (for 127.0.0.1 at 2009-05-01 14:53:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"index", "controller"=>"servicos"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.152293)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mServico Load (0.000540)[0m   [0mSELECT * FROM `servicos` [0m
+Rendering template within layouts/servicos
+Rendering servicos/index
+Completed in 0.01216 (82 reqs/sec) | Rendering: 0.00359 (29%) | DB: 0.15283 (1256%) | 200 OK [http://localhost/servicos]
+
+
+Processing ServicosController#new (for 127.0.0.1 at 2009-05-01 14:53:04) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"new", "controller"=>"servicos"}
+  [4;36;1mServico Columns (0.115140)[0m   [0;1mSHOW FIELDS FROM `servicos`[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.17088 (5 reqs/sec) | Rendering: 0.02645 (15%) | DB: 0.11514 (67%) | 200 OK [http://localhost/servicos/new]
+
+
+Processing ServicosController#new (for 127.0.0.1 at 2009-05-01 14:55:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"new", "controller"=>"servicos"}
+  [4;35;1mServico Columns (0.016371)[0m   [0mSHOW FIELDS FROM `servicos`[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.09148 (10 reqs/sec) | Rendering: 0.02837 (31%) | DB: 0.01637 (17%) | 200 OK [http://localhost/servicos/new]
+
+
+Processing ServicosController#create (for 127.0.0.1 at 2009-05-01 14:55:31) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"commit"=>"Create", "servico"=>{"nome"=>"jdfakjs", "valor"=>"fjfalskdjf", "descricao"=>"fjlskdjflakdjsf"}, "authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "action"=>"create", "controller"=>"servicos"}
+  [4;36;1mServico Columns (0.012559)[0m   [0;1mSHOW FIELDS FROM `servicos`[0m
+  [4;35;1mSQL (0.001823)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.07122 (14 reqs/sec) | Rendering: 0.01775 (24%) | DB: 0.01499 (21%) | 200 OK [http://localhost/servicos]
+
+
+Processing ServicosController#index (for 127.0.0.1 at 2009-05-01 14:57:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"index", "controller"=>"servicos"}
+  [4;35;1mServico Load (0.018560)[0m   [0mSELECT * FROM `servicos` [0m
+Rendering template within layouts/servicos
+Rendering servicos/index
+Completed in 0.05956 (16 reqs/sec) | Rendering: 0.00347 (5%) | DB: 0.01856 (31%) | 200 OK [http://localhost/servicos]
+
+
+Processing ServicosController#new (for 127.0.0.1 at 2009-05-01 14:57:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"new", "controller"=>"servicos"}
+  [4;36;1mServico Columns (0.006664)[0m   [0;1mSHOW FIELDS FROM `servicos`[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.05716 (17 reqs/sec) | Rendering: 0.02178 (38%) | DB: 0.00666 (11%) | 200 OK [http://localhost/servicos/new]
+
+
+Processing ServicosController#create (for 127.0.0.1 at 2009-05-01 14:57:12) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"commit"=>"Create", "servico"=>{"nome"=>"slkdfja", "valor"=>"-4234234", "descricao"=>""}, "authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "action"=>"create", "controller"=>"servicos"}
+  [4;35;1mServico Columns (0.006429)[0m   [0mSHOW FIELDS FROM `servicos`[0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000571)[0m   [0mCOMMIT[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.06244 (16 reqs/sec) | Rendering: 0.01228 (19%) | DB: 0.00761 (12%) | 200 OK [http://localhost/servicos]
+
+
+Processing ServicosController#create (for 127.0.0.1 at 2009-05-01 14:57:24) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"commit"=>"Create", "servico"=>{"nome"=>"slkdfja", "valor"=>"4234234", "descricao"=>""}, "authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "action"=>"create", "controller"=>"servicos"}
+  [4;36;1mServico Columns (0.008746)[0m   [0;1mSHOW FIELDS FROM `servicos`[0m
+  [4;35;1mSQL (0.003193)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.002860)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.07883 (12 reqs/sec) | Rendering: 0.01442 (18%) | DB: 0.01480 (18%) | 200 OK [http://localhost/servicos]
+
+
+Processing ServicosController#create (for 127.0.0.1 at 2009-05-01 14:57:29) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"commit"=>"Create", "servico"=>{"nome"=>"slkdfja", "valor"=>"4234234", "descricao"=>""}, "authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "action"=>"create", "controller"=>"servicos"}
+  [4;35;1mServico Columns (0.006986)[0m   [0mSHOW FIELDS FROM `servicos`[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000573)[0m   [0mCOMMIT[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.06563 (15 reqs/sec) | Rendering: 0.01837 (27%) | DB: 0.00818 (12%) | 200 OK [http://localhost/servicos]
+
+
+Processing ServicosController#create (for 127.0.0.1 at 2009-05-01 14:58:44) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"commit"=>"Create", "servico"=>{"nome"=>"servico1", "valor"=>"4234234", "descricao"=>"jfslkdf"}, "authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "action"=>"create", "controller"=>"servicos"}
+  [4;36;1mServico Columns (0.014327)[0m   [0;1mSHOW FIELDS FROM `servicos`[0m
+  [4;35;1mSQL (0.000602)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.049323)[0m   [0;1mSELECT `nome` FROM `servicos` WHERE (`servicos`.nome = 'servico1') [0m
+  [4;35;1mServico Create (0.188950)[0m   [0mINSERT INTO `servicos` (`nome`, `valor`, `descricao`) VALUES('servico1', 4234234.0, 'jfslkdf')[0m
+  [4;36;1mSQL (0.000542)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/servicos/1
+Completed in 0.29630 (3 reqs/sec) | DB: 0.25374 (85%) | 302 Found [http://localhost/servicos]
+
+
+Processing ServicosController#show (for 127.0.0.1 at 2009-05-01 14:58:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZTZXJ2aWNvIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdG--a4e7e9a118d7592cd9884da6c26d8579863b8e9e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"servicos"}
+  [4;35;1mServico Columns (0.014394)[0m   [0mSHOW FIELDS FROM `servicos`[0m
+  [4;36;1mServico Load (0.002080)[0m   [0;1mSELECT * FROM `servicos` WHERE (`servicos`.`id` = 1) [0m
+Rendering template within layouts/servicos
+Rendering servicos/show
+Completed in 0.05345 (18 reqs/sec) | Rendering: 0.01075 (20%) | DB: 0.01647 (30%) | 200 OK [http://localhost/servicos/1]
+
+
+Processing ServicosController#index (for 127.0.0.1 at 2009-05-01 14:58:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZTZXJ2aWNvIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdU--d7510e753626d182a68746eb7722a7e21712fbb3
+  Parameters: {"action"=>"index", "controller"=>"servicos"}
+  [4;35;1mServico Load (0.002560)[0m   [0mSELECT * FROM `servicos` [0m
+Rendering template within layouts/servicos
+Rendering servicos/index
+  [4;36;1mServico Columns (0.006294)[0m   [0;1mSHOW FIELDS FROM `servicos`[0m
+Completed in 0.05698 (17 reqs/sec) | Rendering: 0.01661 (29%) | DB: 0.00885 (15%) | 200 OK [http://localhost/servicos]
+
+
+Processing ServicosController#new (for 127.0.0.1 at 2009-05-01 14:58:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"new", "controller"=>"servicos"}
+  [4;35;1mServico Columns (0.005102)[0m   [0mSHOW FIELDS FROM `servicos`[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.01681 (59 reqs/sec) | Rendering: 0.00469 (27%) | DB: 0.00510 (30%) | 200 OK [http://localhost/servicos/new]
+
+
+Processing ServicosController#create (for 127.0.0.1 at 2009-05-01 14:59:03) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"commit"=>"Create", "servico"=>{"nome"=>"servico1", "valor"=>"428374", "descricao"=>"jsljdfkasd"}, "authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "action"=>"create", "controller"=>"servicos"}
+  [4;36;1mServico Columns (0.006433)[0m   [0;1mSHOW FIELDS FROM `servicos`[0m
+  [4;35;1mSQL (0.000601)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.002627)[0m   [0;1mSELECT `nome` FROM `servicos` WHERE (`servicos`.nome = 'servico1') [0m
+  [4;35;1mSQL (0.000600)[0m   [0mCOMMIT[0m
+Rendering template within layouts/servicos
+Rendering servicos/new
+Completed in 0.08342 (11 reqs/sec) | Rendering: 0.02608 (31%) | DB: 0.01026 (12%) | 200 OK [http://localhost/servicos]
