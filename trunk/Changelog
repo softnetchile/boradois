@@ -1,4 +1,7 @@
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
+* Fixed SQL error in createTables.
+
+2009-05-01 Iuri Fernandes <iurifq@gmail.com>
 * For some unknown reason the Umbrello file wasn't openning here. I took a file that
 Suzana sent me and replaced the old one.
 * Modified db scrips. It's more organized now. Remember to change 'iuri' in
