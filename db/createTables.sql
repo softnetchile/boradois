@@ -5,7 +5,7 @@ create table hospedes (
 	nome 		varchar(100)	not	null,
 	endereco	varchar(300)	not null,
 	nascimento	date			not null,
-	pais		varchar			not null,
+	pais		varchar(50)		not null,
 	sexo		ENUM('Masculino', 'Feminino')	not null,
 	estCivil	ENUM('Casado', 'Solteiro', 'Divorciado', 'Viuvo')	not null,
 	primary key(id)
