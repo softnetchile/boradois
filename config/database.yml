@@ -1,14 +1,14 @@
 development:
   adapter: mysql
   database: boradois_development
-  username:
+  username: iuri
   password:
   host: localhost
 
 test:
   adapter: mysql
   database: boradois_test
-  username:
+  username: iuri
   password:
   host: localhost
 

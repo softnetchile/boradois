@@ -1,0 +1,149 @@
+
+
+Processing HospedesController#index (for 127.0.0.1 at 2009-05-01 14:08:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"index", "controller"=>"hospedes"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000211)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mHospede Load (0.000723)[0m   [0mSELECT * FROM `hospedes` [0m
+Rendering template within layouts/hospedes
+Rendering hospedes/index
+Completed in 0.01212 (82 reqs/sec) | Rendering: 0.00360 (29%) | DB: 0.00093 (7%) | 200 OK [http://localhost/Hospedes]
+
+
+Processing HospedesController#new (for 127.0.0.1 at 2009-05-01 14:08:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"new", "controller"=>"hospedes"}
+  [4;36;1mHospede Columns (0.024283)[0m   [0;1mSHOW FIELDS FROM `hospedes`[0m
+Rendering template within layouts/hospedes
+Rendering hospedes/new
+Completed in 0.24566 (4 reqs/sec) | Rendering: 0.19548 (79%) | DB: 0.02428 (9%) | 200 OK [http://localhost/hospedes/new]
+
+
+Processing HospedesController#create (for 127.0.0.1 at 2009-05-01 14:08:59) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"commit"=>"Create", "hospede"=>{"endereco"=>"", "nascimento(3i)"=>"1", "nome"=>"", "estCivil"=>"", "pais"=>"", "nascimento(1i)"=>"2004", "sexo"=>"", "nascimento(2i)"=>"2"}, "authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "action"=>"create", "controller"=>"hospedes"}
+  [4;35;1mHospede Columns (0.012607)[0m   [0mSHOW FIELDS FROM `hospedes`[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mBEGIN[0m
+  [4;35;1mHospede Create (0.105080)[0m   [0mINSERT INTO `hospedes` (`endereco`, `nome`, `nascimento`, `estCivil`, `pais`, `sexo`) VALUES('', '', '2004-02-01', '', '', '')[0m
+  [4;36;1mSQL (0.011407)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/hospedes/1
+Completed in 0.16213 (6 reqs/sec) | DB: 0.12971 (80%) | 302 Found [http://localhost/hospedes]
+
+
+Processing HospedesController#show (for 127.0.0.1 at 2009-05-01 14:08:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZIb3NwZWRlIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdG--74edf9928b888a1e318361f5de17d3bc26a0eb5e
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"hospedes"}
+  [4;35;1mHospede Columns (0.005753)[0m   [0mSHOW FIELDS FROM `hospedes`[0m
+  [4;36;1mHospede Load (0.080798)[0m   [0;1mSELECT * FROM `hospedes` WHERE (`hospedes`.`id` = 1) [0m
+Rendering template within layouts/hospedes
+Rendering hospedes/show
+Completed in 0.12523 (7 reqs/sec) | Rendering: 0.01278 (10%) | DB: 0.08655 (69%) | 200 OK [http://localhost/hospedes/1]
+
+
+Processing HospedesController#index (for 127.0.0.1 at 2009-05-01 14:09:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZIb3NwZWRlIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdU--4bcf9092bdece234a283e51e7880a12952d29abd
+  Parameters: {"action"=>"index", "controller"=>"hospedes"}
+  [4;35;1mHospede Load (0.002378)[0m   [0mSELECT * FROM `hospedes` [0m
+Rendering template within layouts/hospedes
+Rendering hospedes/index
+  [4;36;1mHospede Columns (0.011469)[0m   [0;1mSHOW FIELDS FROM `hospedes`[0m
+Completed in 0.06055 (16 reqs/sec) | Rendering: 0.01873 (30%) | DB: 0.01385 (22%) | 200 OK [http://localhost/hospedes]
+
+
+Processing HospedesController#destroy (for 127.0.0.1 at 2009-05-01 14:09:13) [DELETE]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "_method"=>"delete", "action"=>"destroy", "id"=>"1", "controller"=>"hospedes"}
+  [4;35;1mHospede Columns (0.013004)[0m   [0mSHOW FIELDS FROM `hospedes`[0m
+  [4;36;1mHospede Load (0.001951)[0m   [0;1mSELECT * FROM `hospedes` WHERE (`hospedes`.`id` = 1) [0m
+  [4;35;1mSQL (0.000602)[0m   [0mBEGIN[0m
+  [4;36;1mHospede Destroy (0.163983)[0m   [0;1m DELETE FROM `hospedes`
+ WHERE `id` = 1
+[0m
+  [4;35;1mSQL (0.000478)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/hospedes
+Completed in 0.27695 (3 reqs/sec) | DB: 0.18002 (65%) | 302 Found [http://localhost/hospedes/1]
+
+
+Processing HospedesController#index (for 127.0.0.1 at 2009-05-01 14:09:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"index", "controller"=>"hospedes"}
+  [4;36;1mHospede Load (0.000890)[0m   [0;1mSELECT * FROM `hospedes` [0m
+Rendering template within layouts/hospedes
+Rendering hospedes/index
+Completed in 0.01260 (79 reqs/sec) | Rendering: 0.00138 (10%) | DB: 0.00089 (7%) | 200 OK [http://localhost/hospedes]
+
+
+Processing HospedesController#index (for 127.0.0.1 at 2009-05-01 14:09:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"index", "controller"=>"hospedes"}
+  [4;35;1mHospede Load (0.007513)[0m   [0mSELECT * FROM `hospedes` [0m
+Rendering template within layouts/hospedes
+Rendering hospedes/index
+Completed in 0.07201 (13 reqs/sec) | Rendering: 0.00895 (12%) | DB: 0.00751 (10%) | 200 OK [http://localhost/hospedes]
+
+
+Processing HospedesController#index (for 127.0.0.1 at 2009-05-01 14:14:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"index", "controller"=>"hospedes"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000494)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mHospede Load (0.001816)[0m   [0mSELECT * FROM `hospedes` [0m
+Rendering template within layouts/hospedes
+Rendering hospedes/index
+Completed in 0.06672 (14 reqs/sec) | Rendering: 0.01738 (26%) | DB: 0.00231 (3%) | 200 OK [http://localhost/hospedes]
+
+
+Processing HospedesController#new (for 127.0.0.1 at 2009-05-01 14:14:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"new", "controller"=>"hospedes"}
+  [4;36;1mHospede Columns (0.053977)[0m   [0;1mSHOW FIELDS FROM `hospedes`[0m
+Rendering template within layouts/hospedes
+Rendering hospedes/new
+Completed in 0.36359 (2 reqs/sec) | Rendering: 0.26619 (73%) | DB: 0.05398 (14%) | 200 OK [http://localhost/hospedes/new]
+
+
+Processing HospedesController#create (for 127.0.0.1 at 2009-05-01 14:14:54) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"commit"=>"Create", "hospede"=>{"endereco"=>"", "nascimento(3i)"=>"1", "nome"=>"", "estCivil"=>"", "pais"=>"", "nascimento(1i)"=>"2009", "sexo"=>"", "nascimento(2i)"=>"5"}, "authenticity_token"=>"9ce14c06a988005f8a5b1dd0a76de9fc8f513571", "action"=>"create", "controller"=>"hospedes"}
+  [4;35;1mHospede Columns (0.006372)[0m   [0mSHOW FIELDS FROM `hospedes`[0m
+  [4;36;1mSQL (0.000625)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.014044)[0m   [0mCOMMIT[0m
+Rendering template within layouts/hospedes
+Rendering hospedes/new
+Completed in 0.09065 (11 reqs/sec) | Rendering: 0.02671 (29%) | DB: 0.02104 (23%) | 200 OK [http://localhost/hospedes]
+
+
+Processing HospedesController#index (for 127.0.0.1 at 2009-05-01 14:15:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOTk5YzM5MGU3ZWYxZDcwM2JmNjc5ZDg3MDBjNjZk
+Y2QiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7d04000b06d50cf9415f9d2257a10400ba0638e3
+  Parameters: {"action"=>"index", "controller"=>"hospedes"}
+  [4;36;1mHospede Load (0.002803)[0m   [0;1mSELECT * FROM `hospedes` [0m
+Rendering template within layouts/hospedes
+Rendering hospedes/index
+Completed in 0.03308 (30 reqs/sec) | Rendering: 0.00363 (10%) | DB: 0.00280 (8%) | 200 OK [http://localhost/hospedes]

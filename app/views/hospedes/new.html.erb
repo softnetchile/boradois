@@ -1,0 +1,35 @@
+<h1>New hospede</h1>
+
+<% form_for(@hospede) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :endereco %><br />
+    <%= f.text_field :endereco %>
+  </p>
+  <p>
+    <%= f.label :nascimento %><br />
+    <%= f.date_select :nascimento %>
+  </p>
+  <p>
+    <%= f.label :pais %><br />
+    <%= f.text_field :pais %>
+  </p>
+  <p>
+    <%= f.label :sexo %><br />
+    <%= f.text_field :sexo %>
+  </p>
+  <p>
+    <%= f.label :estCivil %><br />
+    <%= f.text_field :estCivil %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', hospedes_path %>
