@@ -1,4 +1,8 @@
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
+* Added Umbrello file.
+* Added create.sql. It needs modifications.
+
+2009-05-01 Iuri Fernandes <iurifq@gmail.com>
 * Modified database configurations.
 * Added Changelog file.
 
