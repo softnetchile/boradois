@@ -1,20 +1,20 @@
 development:
   adapter: mysql
   database: boradois_development
-  username: root
+  username:
   password:
   host: localhost
 
 test:
   adapter: mysql
   database: boradois_test
-  username: root
+  username:
   password:
   host: localhost
 
 production:
   adapter: mysql
   database: boradois_production
-  username: root
-  password: 
+  username: production
+  password: qualquer
   host: localhost
