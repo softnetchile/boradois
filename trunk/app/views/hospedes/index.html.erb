@@ -1,0 +1,30 @@
+<h1>Listing hospedes</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Endereco</th>
+    <th>Nascimento</th>
+    <th>Pais</th>
+    <th>Sexo</th>
+    <th>Estcivil</th>
+  </tr>
+
+<% for hospede in @hospedes %>
+  <tr>
+    <td><%=h hospede.nome %></td>
+    <td><%=h hospede.endereco %></td>
+    <td><%=h hospede.nascimento %></td>
+    <td><%=h hospede.pais %></td>
+    <td><%=h hospede.sexo %></td>
+    <td><%=h hospede.estCivil %></td>
+    <td><%= link_to 'Show', hospede %></td>
+    <td><%= link_to 'Edit', edit_hospede_path(hospede) %></td>
+    <td><%= link_to 'Destroy', hospede, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hospede', new_hospede_path %>

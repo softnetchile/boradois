@@ -1,4 +1,7 @@
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
+* Added Hospede scaffold and presence validation.
+
+2009-05-01 Iuri Fernandes <iurifq@gmail.com>
 * Fixed SQL error in createTables.
 
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
