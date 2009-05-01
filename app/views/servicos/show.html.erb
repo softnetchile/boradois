@@ -1,0 +1,18 @@
+<p>
+  <b>Nome:</b>
+  <%=h @servico.nome %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%=h @servico.valor %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%=h @servico.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_servico_path(@servico) %> |
+<%= link_to 'Back', servicos_path %>
