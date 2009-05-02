@@ -1,4 +1,4 @@
-<h1>Editing hospede</h1>
+<h1>Editando hospede</h1>
 
 <% form_for(@hospede) do |f| %>
   <%= f.error_messages %>
@@ -28,9 +28,9 @@
     <%= f.text_field :estCivil %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "Atualizar" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @hospede %> |
-<%= link_to 'Back', hospedes_path %>
+<%= link_to 'Exibir', @hospede %> |
+<%= link_to 'Voltar', hospedes_path %>

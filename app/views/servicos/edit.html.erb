@@ -1,4 +1,4 @@
-<h1>Editing servico</h1>
+<h1>Editando servico</h1>
 
 <% form_for(@servico) do |f| %>
   <%= f.error_messages %>
@@ -16,9 +16,9 @@
     <%= f.text_area :descricao %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "Atualizar" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @servico %> |
-<%= link_to 'Back', servicos_path %>
+<%= link_to 'Exibir', @servico %> |
+<%= link_to 'Voltar', servicos_path %>
