@@ -21,13 +21,13 @@
   </p>
   <p>
   Sexo<br />
-  <%= select("hospede","sexo", %w[Masculino Feminino], {} , { :new => nil }) %>
+  <%= select("hospede","sexo", Hospede.generos, {} , { :new => nil }) %>
   <%= #f.label :sexo %><br />    <%= f.text_field :sexo 
   %>
   </p>
   <p>
     Estado civil<br />
-    <%= select("hospede","estCivil", %w[Casado Solteiro Divorciado Viuvo], {} , { :new => nil }) %>
+    <%= select("hospede","estCivil", Hospede.estadosCivis , {} , { :new => nil }) %>
     <%= #f.label :estCivil %><br />    <%= f.text_field :estCivil 
     %>
   </p>
