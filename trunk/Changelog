@@ -1,4 +1,9 @@
 2009-05-02 Suzana Matos <suzana.mato@gmail.com>
+* Fixed combobox in Hospede:
+	- edit
+	- new
+
+2009-05-02 Suzana Matos <suzana.mato@gmail.com>
 * Translated the form labels to Portuguese
 * Fixed class diagram
 	- Deleted nasc, the duplication of nascimento
