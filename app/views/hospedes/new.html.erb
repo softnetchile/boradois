@@ -20,12 +20,16 @@
     <%= f.text_field :pais %>
   </p>
   <p>
-    <%= f.label :sexo %><br />
-    <%= f.text_field :sexo %>
+  Sexo<br />
+  <%= select("hospede","sexo", %w[Masculino Feminino], {} , { :new => nil }) %>
+  <%= #f.label :sexo %><br />    <%= f.text_field :sexo 
+  %>
   </p>
   <p>
-    <%= f.label :estCivil %><br />
-    <%= f.text_field :estCivil %>
+    Estado civil<br />
+    <%= select("hospede","estCivil", %w[Casado Solteiro Divorciado Viuvo], {} , { :new => nil }) %>
+    <%= #f.label :estCivil %><br />    <%= f.text_field :estCivil 
+    %>
   </p>
   <p>
     <%= f.submit "Inserir" %>
