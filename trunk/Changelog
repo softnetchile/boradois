@@ -1,4 +1,7 @@
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
+* Removed unnecessary files.
+
+2009-05-01 Iuri Fernandes <iurifq@gmail.com>
 * Added Servico scaffold and some validation.
 * Added tables servicos, apartamentos and recepcionistas db/createTables.sql.
 
