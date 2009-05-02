@@ -44,7 +44,7 @@ class HospedesController < ApplicationController
 
     respond_to do |format|
       if @hospede.save
-        flash[:notice] = 'Hospede was successfully created.'
+        flash[:notice] = 'Hospede inserido com sucesso.'
         format.html { redirect_to(@hospede) }
         format.xml  { render :xml => @hospede, :status => :created, :location => @hospede }
       else
@@ -61,7 +61,7 @@ class HospedesController < ApplicationController
 
     respond_to do |format|
       if @hospede.update_attributes(params[:hospede])
-        flash[:notice] = 'Hospede was successfully updated.'
+        flash[:notice] = 'Hospede atualizado com sucesso.'
         format.html { redirect_to(@hospede) }
         format.xml  { head :ok }
       else

@@ -1,10 +1,10 @@
-<h1>Listing servicos</h1>
+<h1>Lista de servicos</h1>
 
 <table>
   <tr>
     <th>Nome</th>
     <th>Valor</th>
-    <th>Descricao</th>
+    <th>Descrição</th>
   </tr>
 
 <% for servico in @servicos %>
@@ -12,13 +12,13 @@
     <td><%=h servico.nome %></td>
     <td><%=h servico.valor %></td>
     <td><%=h servico.descricao %></td>
-    <td><%= link_to 'Show', servico %></td>
-    <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
-    <td><%= link_to 'Destroy', servico, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Exibir', servico %></td>
+    <td><%= link_to 'Editar', edit_servico_path(servico) %></td>
+    <td><%= link_to 'Remover', servico, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New servico', new_servico_path %>
+<%= link_to 'Inserir novo servico', new_servico_path %>

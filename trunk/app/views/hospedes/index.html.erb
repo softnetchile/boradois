@@ -1,13 +1,13 @@
-<h1>Listing hospedes</h1>
+<h1>Lista de hospedes</h1>
 
 <table>
   <tr>
     <th>Nome</th>
-    <th>Endereco</th>
+    <th>Endereço</th>
     <th>Nascimento</th>
     <th>Pais</th>
     <th>Sexo</th>
-    <th>Estcivil</th>
+    <th>Estado Civil</th>
   </tr>
 
 <% for hospede in @hospedes %>
@@ -18,13 +18,13 @@
     <td><%=h hospede.pais %></td>
     <td><%=h hospede.sexo %></td>
     <td><%=h hospede.estCivil %></td>
-    <td><%= link_to 'Show', hospede %></td>
-    <td><%= link_to 'Edit', edit_hospede_path(hospede) %></td>
-    <td><%= link_to 'Destroy', hospede, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Exibir', hospede %></td>
+    <td><%= link_to 'Editar', edit_hospede_path(hospede) %></td>
+    <td><%= link_to 'Remover', hospede, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New hospede', new_hospede_path %>
+<%= link_to 'Inserir novo hospede', new_hospede_path %>

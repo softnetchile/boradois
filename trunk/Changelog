@@ -1,4 +1,9 @@
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
+* Translated the form labels to Portuguese
+* Fixed class diagram
+	- Deleted nasc, the duplication of nascimento
+
+2009-05-01 Iuri Fernandes <iurifq@gmail.com>
 * Removed unnecessary files.
 
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
