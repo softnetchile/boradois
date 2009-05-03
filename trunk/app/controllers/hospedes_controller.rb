@@ -1,4 +1,6 @@
 class HospedesController < ApplicationController
+  before_filter :authorize
+
   # GET /hospedes
   # GET /hospedes.xml
   def index

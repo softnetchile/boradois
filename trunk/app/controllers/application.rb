@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
   def authorize
 	unless session[:admin]
 	   flash[:notice] = "Please log in"
-	   redirect_to(:action => "login")
+	   session[:jumpto] = request.parameters
+	   redirect_to(:controller => "admin", :action => "login")
 	end
   end
 

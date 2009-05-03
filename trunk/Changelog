@@ -1,4 +1,8 @@
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
+* Modified redirect to remember which page user was trying to acces.
+* Hospedes and Servicos now can only be seen and edited by Recepcionistas.
+
+2009-05-01 Iuri Fernandes <iurifq@gmail.com>
 * Added images, javascripts and css directories.
 
 2009-05-01 Iuri Fernandes <iurifq@gmail.com>
