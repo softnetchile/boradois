@@ -5,7 +5,7 @@ class Recepcionista < ActiveRecord::Base
 	attr_reader :id
 	attr_accessible :nome, :endereco, :nascimento, :sexo, :estCivil, :login, :password
 
-	validates_uniqueness_of :nome
+	validates_uniqueness_of :login
 
 	def before_create
 		self.f.hashed_password = User.hash_password(self.password)
