@@ -1,4 +1,5 @@
 class HospedesController < ApplicationController
+  layout 'layout'
   before_filter :authorize
 
   # GET /hospedes

@@ -1,19 +1,19 @@
 <% @page_title = "Login" -%>
+<h1>Login</h1>
 <%= error_messages_for 'recepcionista' %>
 <% form_tag do %>
 <table>
-<tr>
-<td>User login:</td>
-<td><%= text_field("recepcionista", "login") %></td>
-</tr>
-<tr>
-<td>Password:</td>
-<td><%= password_field("recepcionista", "password") %></td>
-</tr>
-<tr>
-<td></td>
-<td><input type="submit" value="Login" /></td>
-</tr>
+	<tr>
+		<td>User login:</td>
+		<td><%= text_field("recepcionista", "login") %></td>
+	</tr>
+	<tr>
+		<td>Password:</td>
+		<td><%= password_field("recepcionista", "password") %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="submit" value="Login" /></td>
+	</tr>
 </table>
 <% end %>
-

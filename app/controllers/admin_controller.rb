@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-
+  layout 'layout'
   before_filter :authorize, :except => :login
 
   def login
@@ -31,4 +31,7 @@ class AdminController < ApplicationController
 	redirect_to(:action => "login")
   end
 
+  def index
+	
+  end
 end

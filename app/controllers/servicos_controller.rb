@@ -1,5 +1,7 @@
 class ServicosController < ApplicationController
+  layout 'layout'
   before_filter :authorize
+ 
   # GET /servicos
   # GET /servicos.xml
   def index

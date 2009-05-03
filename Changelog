@@ -1,4 +1,19 @@
 2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+* controllers :
+	- hospedes : added layout
+	- servicos : added layout
+	- admin : added layout and the method index
+	- application : changed the file name (because of the new version of
+	rails)
+* views/shared : included menus for layout
+* views/layouts : 
+	- servicos : returned to the old version
+	- layout : the main layout for (almost) every class
+* view/admin : 
+	- index : added 
+	- login : fixed identation
+
+2009-05-03 Suzana Matos <suzana.mato@gmail.com>
 * Modified public/stylesheets/scaffold.css
 	-Created CSS for 
 		. body
