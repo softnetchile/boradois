@@ -12,13 +12,15 @@ class AdminController < ApplicationController
 			logged_in_user = @user.try_to_login
 			if logged_in_user
 				session[:admin] = logged_in_user
-				redirect_to(:action => "index")
+				jumpto = session[:jumpto] || { :action => "index" }
+				session[:jumpto] = nil
+				redirect_to(jumpto)
 			else
 				flash[:notice] = "Login ou senha inválidos."
 			end
 		end
 	else
-		flash[:notice] = "Already logged in."
+		flash[:notice] = "You have already logged in."
 		redirect_to(:action => "index")
 	end
   end

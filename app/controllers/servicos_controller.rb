@@ -1,4 +1,5 @@
 class ServicosController < ApplicationController
+  before_filter :authorize
   # GET /servicos
   # GET /servicos.xml
   def index
