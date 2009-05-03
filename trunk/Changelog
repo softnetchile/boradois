@@ -1,4 +1,7 @@
 2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+* views/layouts/layout : fixed session => show the right menu now
+
+2009-05-03 Suzana Matos <suzana.mato@gmail.com>
 * controllers :
 	- hospedes : added layout
 	- servicos : added layout
