@@ -1,20 +1,23 @@
 <h1>Lista de servicos</h1>
 
 <table>
-  <tr>
+  <tr class="list"> 
     <th>Nome</th>
     <th>Valor</th>
     <th>Descrição</th>
+    <th colspan="3">Opções</th>
   </tr>
 
-<% for servico in @servicos %>
-  <tr>
+<% par_impar = 0;
+  for servico in @servicos 
+	  par_impar = 1 - par_impar %>
+  <tr class="listLine<%= par_impar %>">
     <td><%=h servico.nome %></td>
     <td><%=h servico.valor %></td>
     <td><%=h servico.descricao %></td>
-    <td><%= link_to 'Exibir', servico %></td>
-    <td><%= link_to 'Editar', edit_servico_path(servico) %></td>
-    <td><%= link_to 'Remover', servico, :confirm => 'Você tem certeza?', :method => :delete %></td>
+    <td width="5%"><%= link_to 'Exibir', servico %></td>
+    <td width="5%"><%= link_to 'Editar', edit_servico_path(servico) %></td>
+    <td width="5%"><%= link_to 'Remover', servico, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
