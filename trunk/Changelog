@@ -1,4 +1,11 @@
 2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+* app/views/admin : 
+	- index : fixed wrong words
+	- login : fixed the colspan just to be cute(?)
+* public/stylesheets/scaffold : 
+	- hide empty-cells in table
+
+2009-05-03 Suzana Matos <suzana.mato@gmail.com>
 * views/layouts/layout : fixed session => show the right menu now
 
 2009-05-03 Suzana Matos <suzana.mato@gmail.com>
