@@ -1,26 +1,29 @@
 <h1>Lista de hospedes</h1>
 
 <table>
-  <tr>
+  <tr class="list">
     <th>Nome</th>
     <th>Endereço</th>
     <th>Nascimento</th>
     <th>Pais</th>
     <th>Sexo</th>
     <th>Estado Civil</th>
+    <th colspan="3">Opções</th>
   </tr>
 
-<% for hospede in @hospedes %>
-  <tr>
+<% par_impar = 0
+  for hospede in @hospedes 
+	par_impar = 1 - par_impar %>
+  <tr class="listLine<%= par_impar %>">
     <td><%=h hospede.nome %></td>
     <td><%=h hospede.endereco %></td>
     <td><%=h hospede.nascimento %></td>
     <td><%=h hospede.pais %></td>
     <td><%=h hospede.sexo %></td>
     <td><%=h hospede.estCivil %></td>
-    <td><%= link_to 'Exibir', hospede %></td>
-    <td><%= link_to 'Editar', edit_hospede_path(hospede) %></td>
-    <td><%= link_to 'Remover', hospede, :confirm => 'Você tem certeza?', :method => :delete %></td>
+    <td width="5%"><%= link_to 'Exibir', hospede %></td>
+    <td width="5%"><%= link_to 'Editar', edit_hospede_path(hospede) %></td>
+    <td width="5%"><%= link_to 'Remover', hospede, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

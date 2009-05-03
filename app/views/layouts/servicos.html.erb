@@ -8,10 +8,28 @@
   <%= stylesheet_link_tag 'scaffold' %>
 </head>
 <body>
+<!--<p style="color: green"><%= flash[:notice] %></p>-->
 
-<p style="color: green"><%= flash[:notice] %></p>
+<div id="colunas">
+	<div id="topo">
+		Hotel Boradois
+	</div>
 
-<%= yield  %>
+	<div id="menu">
+		<p>Home</p>
+		<p>Link1</p>
+		<p>Link2</p>
+		<p>.<br>.<br>.</p>
+	</div>
+
+	<div id="conteudo">
+		<%= yield  %>
+	</div>
+	
+	<div id="rodape">
+	</div>
+
+</div>
 
 </body>
 </html>
