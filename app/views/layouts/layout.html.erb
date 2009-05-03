@@ -16,7 +16,7 @@
 	</div>
 
 	<div id="menu">
-		<%= unless params[:admin]
+		<%= if session[:admin]
 			yield(:menu_admin) || render(:partial => 'shared/menu_admin') 
 		    else
 			yield(:menu) || render(:partial => 'shared/menu')
