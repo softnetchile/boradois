@@ -1,0 +1,9 @@
+-colocar campos de selecao em reserva do hospede e do quarto
+-ajeitar chave estrangeira de reserva
+-ao fazer reserva, mostrar na listagem de apartamento que esse foi reservado para as datas da reserva
+-colocar campo de seleção em apartamento do tipo de apartamento
+
+-fazer validações que estão faltando
+	-verificar se o apartamento estará disponível para as datas da reserva
+
+-verificar erros de interface
