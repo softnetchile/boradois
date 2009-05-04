@@ -1,4 +1,7 @@
 2009-05-04 Iuri Fernandes <iurifq@gmail.com>
+* Created  scaffolding for reservas. It's necessary to alter tipoAp and hosp in new reserva form.
+
+2009-05-04 Iuri Fernandes <iurifq@gmail.com>
 * Created  table reservas, but the foreign key for hospedes is not working.
 
 2009-05-04 Iuri Fernandes <iurifq@gmail.com>
