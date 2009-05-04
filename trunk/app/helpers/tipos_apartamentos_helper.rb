@@ -1,0 +1,2 @@
+module TiposApartamentosHelper
+end

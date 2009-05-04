@@ -27,9 +27,9 @@ create table recepcionistas (
 
 drop table if exists apartamentos;
 
-drop table if exists tiposApartamentos;
+drop table if exists tipos_apartamentos;
 
-create table tiposApartamentos (
+create table tipos_apartamentos (
 	id			int				not	null auto_increment,
 	nome 		varchar(100)	not	null,
 	descricao	text			not null,

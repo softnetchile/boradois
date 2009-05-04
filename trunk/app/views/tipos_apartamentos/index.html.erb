@@ -1,0 +1,24 @@
+<h1>Listing tipos_apartamentos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descricao</th>
+    <th>Valor</th>
+  </tr>
+
+<% for tipos_apartamento in @tipos_apartamentos %>
+  <tr>
+    <td><%=h tipos_apartamento.nome %></td>
+    <td><%=h tipos_apartamento.descricao %></td>
+    <td><%=h tipos_apartamento.valor %></td>
+    <td><%= link_to 'Show', tipos_apartamento %></td>
+    <td><%= link_to 'Edit', edit_tipos_apartamento_path(tipos_apartamento) %></td>
+    <td><%= link_to 'Destroy', tipos_apartamento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tipos_apartamento', new_tipos_apartamento_path %>
