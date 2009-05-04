@@ -1,3 +1,9 @@
+2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+* Fixed createTables 
+	- apartamentos (wrong name in FK)
+	- reservas (wrong name in FK)
+	- hospedes (without engine inodb)
+
 2009-05-04 Iuri Fernandes <iurifq@gmail.com>
 * Created  scaffolding for apartamento.
 * Added forgotten files from reserva.

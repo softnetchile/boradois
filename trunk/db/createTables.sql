@@ -17,7 +17,7 @@ drop table if exists reservas;
 drop table if exists hospedes;
 
 create table hospedes (
-	id			int				not	null auto_increment,
+	id			int	not	null auto_increment,
 	nome 		varchar(100)	not	null,
 	endereco	varchar(300)	not null,
 	nascimento	date			not null,
@@ -25,7 +25,7 @@ create table hospedes (
 	sexo		ENUM('Masculino', 'Feminino')	not null,
 	estCivil	ENUM('Casado', 'Solteiro', 'Divorciado', 'Viuvo')	not null,
 	primary key(id)
-);
+) ENGINE = InnoDB;
 
 drop table if exists apartamentos;
 
@@ -48,8 +48,10 @@ create table reservas (
 	primary key(id),
 	index (fkTiposApartamentos),
 	index (fkHospedes),
-	foreign key (fkTiposApartamentos)	references tiposApartamentos(id)	on delete cascade on update cascade,
-	foreign key (fkHospedes)			references hospedes(id)				on delete cascade on update cascade
+	foreign key (fkTiposApartamentos)	references tipos_apartamentos(id)	
+	on delete cascade on update cascade,
+	foreign key (fkHospedes)		references hospedes(id)			
+	on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
 create table apartamentos (
@@ -59,7 +61,7 @@ create table apartamentos (
 	livre		boolean			default true,
 	primary key(id),
 	index (fkTiposApartamentos),
-	foreign key (fkTiposApartamentos) references tiposApartamentos(id)
+	foreign key (fkTiposApartamentos) references tipos_apartamentos(id)
 	on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
