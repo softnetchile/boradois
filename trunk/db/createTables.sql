@@ -27,17 +27,6 @@ create table recepcionistas (
 
 drop table if exists apartamentos;
 
-create table apartamentos (
-	id			int				not	null auto_increment,
-	num			int				not	null unique,
-	idTiposApartametos	int		not null,
-	tipo		ENUM('Executivo', 'Luxo', 'Presidencial')	not null,
-	livre		boolean			default true,
-	foreign key (idTiposApartametos) references tiposApartamentos(id)
-	on delete cascade on delete cascade,
-	primary key(id)
-) ENGINE = InnoDB;
-
 drop table if exists tiposApartamentos;
 
 create table tiposApartamentos (
@@ -46,6 +35,18 @@ create table tiposApartamentos (
 	descricao	text			not null,
 	valor		float			not null,
 	primary key(id)
+) ENGINE = InnoDB;
+
+create table apartamentos (
+	id			int				not	null auto_increment,
+	num			int				not	null unique,
+	fkTiposApartamentos	int		not null,
+	tipo		ENUM('Executivo', 'Luxo', 'Presidencial')	not null,
+	livre		boolean			default true,
+	primary key(id),
+	index (fkTiposApartamentos),
+	foreign key (fkTiposApartamentos) references tiposApartamentos(id)
+	on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
 drop table if exists servicos;
