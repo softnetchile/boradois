@@ -1,3 +1,7 @@
+2009-05-02 Iuri Fernandes <iurifq@gmail.com>
+* Modified createTables script to create TiposApartamentos. It's not working
+yet.
+
 2009-05-03 Suzana Matos <suzana.mato@gmail.com>
 * app/views/admin : 
 	- index : fixed wrong words
