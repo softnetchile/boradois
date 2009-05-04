@@ -1,0 +1,13 @@
+<p>
+  <b>Dataentrada:</b>
+  <%=h @reserva.dataEntrada %>
+</p>
+
+<p>
+  <b>Datasaida:</b>
+  <%=h @reserva.dataSaida %>
+</p>
+
+
+<%= link_to 'Edit', edit_reserva_path(@reserva) %> |
+<%= link_to 'Back', reservas_path %>

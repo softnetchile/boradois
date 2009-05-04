@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :apartamentos
+
   map.resources :reservas
 
   map.resources :tipos_apartamentos

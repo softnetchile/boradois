@@ -1,0 +1,20 @@
+<h1>Editing reserva</h1>
+
+<% form_for(@reserva) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :dataEntrada %><br />
+    <%= f.date_select :dataEntrada %>
+  </p>
+  <p>
+    <%= f.label :dataSaida %><br />
+    <%= f.date_select :dataSaida %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @reserva %> |
+<%= link_to 'Back', reservas_path %>
