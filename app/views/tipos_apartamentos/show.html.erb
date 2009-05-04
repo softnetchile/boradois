@@ -1,0 +1,18 @@
+<p>
+  <b>Nome:</b>
+  <%=h @tipos_apartamento.nome %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%=h @tipos_apartamento.descricao %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%=h @tipos_apartamento.valor %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipos_apartamento_path(@tipos_apartamento) %> |
+<%= link_to 'Back', tipos_apartamentos_path %>
