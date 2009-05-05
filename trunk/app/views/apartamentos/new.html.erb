@@ -1,4 +1,4 @@
-<h1>New apartamento</h1>
+<h1>Inserindo apartamento</h1>
 
 <% form_for(@apartamento) do |f| %>
   <%= f.error_messages %>
@@ -8,8 +8,8 @@
     <%= f.text_field :num %>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit "Inserir" %>
   </p>
 <% end %>
 
-<%= link_to 'Back', apartamentos_path %>
+<%= link_to 'Voltar', apartamentos_path %>
