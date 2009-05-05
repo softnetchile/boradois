@@ -1,3 +1,6 @@
+2009-05-05 Iuri Fernandes <iurifq@gmail.com>
+* Commented okToReserve method
+
 2009-05-05 Suzana Matos <suzana.mato@gmail.com>
 * models :
 	- reserva : tried to fix validation of reserva... (but it isn't working...)

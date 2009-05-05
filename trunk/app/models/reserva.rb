@@ -2,6 +2,7 @@ class Reserva < ActiveRecord::Base
 	belongs_to :tipos_apartamentos
 	belongs_to :hospedes
 
+=begin	
 	def self.okToReserve(dataEntrada, dataSaida, fkTiposApartamentos)
 		if dataEntrada <= dataSaida then
 			@totalAp=Apartamento.count(:conditions => ["fkTiposApartamentos = ?",fkTiposApartamentos])
@@ -12,9 +13,11 @@ class Reserva < ActiveRecord::Base
 		end
 		return false
 	end
-	
+
 	def validate
 		errors.add( "Reserva não pode ser feita") unless Reserva.okToReserve :dataEntrada, :dataSaida, :fkTiposApartamentos
 		#não sei se isso tah ok sem o primeiro argumento... mas passou
 	end
+=end
+
 end
