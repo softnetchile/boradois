@@ -8,28 +8,24 @@
     <%= f.text_field :nome %>
   </p>
   <p>
-    <%= f.label :endereco %><br />
+    <%= f.label :endereco, 'Endereço' %><br />
     <%= f.text_field :endereco %>
   </p>
   <p>
     <%= f.label :nascimento %><br />
-    <%= f.date_select :nascimento %>
+    <%= f.date_select :nascimento, :end_year => Time.now.year, :start_year => Time.now.year-100%>
   </p>
   <p>
-    <%= f.label :pais %><br />
+    <%= f.label :pais, 'País' %><br />
     <%= f.text_field :pais %>
   </p>
   <p>
-  Sexo<br />
-  <%= select("hospede","sexo", Hospede.generos, {} , { :new => nil }) %>
-  <%= #f.label :sexo %><br />    <%= f.text_field :sexo 
-  %>
+    <%= f.label :sexo%><br />
+    <%= select("hospede","sexo", Hospede.generos, {} , { :new => nil }) %>
   </p>
   <p>
-    Estado civil<br />
+    <%= f.label :estCivil, 'Estado civil' %><br />
     <%= select("hospede","estCivil", Hospede.estadosCivis , {} , { :new => nil }) %>
-    <%= #f.label :estCivil %><br />    <%= f.text_field :estCivil 
-    %>
   </p>
   <p>
     <%= f.submit "Inserir" %>

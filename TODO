@@ -7,5 +7,5 @@
 	-verificar se o apartamento estará disponível para as datas da reserva
 
 -verificar erros de interface
-	-data de nascimento do hospede (ano)
+(DONE)	-data de nascimento do hospede (ano)
 	-acentuações (possivel erro no windows)

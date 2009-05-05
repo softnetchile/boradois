@@ -5,15 +5,19 @@
 
   <p>
     <%= f.label :hospede %><br />
-	<%= f.select("fkHospedes", Hospede.all.collect {|h| [ h.nome, h.id ] }, {:include_blank => true}) %>
+    <%= f.select("fkHospedes", Hospede.all.collect {|h| [ h.nome, h.id ] }, {}) %>
   </p>
   <p>
-    <%= f.label :dataEntrada %><br />
-    <%= f.date_select :dataEntrada %>
+    <%= f.label :fkTiposApartamentos, "Tipo de apartamento"%><br />
+    <%= f.select("fkTiposApartamentos", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {}) %>
+  </p>
+  <p>
+    <%= f.label :dataEntrada, 'Data de entrada' %><br />
+    <%= f.date_select :dataEntrada, :end_year => Time.now.year+10, :start_year => Time.now.year %>
   </p>
   <p>
     <%= f.label :dataSaida %><br />
-    <%= f.date_select :dataSaida %>
+    <%= f.date_select :dataSaida, :end_year => Time.now.year+10, :start_year => Time.now.year %>
   </p>
   <p>
   <%= f.submit "Atualizar" %>

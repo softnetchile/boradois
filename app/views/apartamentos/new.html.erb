@@ -4,11 +4,11 @@
   <%= f.error_messages %>
 
   <p>
-    Número<br />
+    <%= f.label :num, 'Número' %><br />
     <%= f.text_field :num %>
   </p>
   <p>
-    Tipo do apartamento<br />
+    <%= f.label :fkTiposApartamentos, 'Tipo do apartamento'%><br />
     <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {}) %>
   </p>
   <p>

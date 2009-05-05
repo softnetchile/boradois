@@ -3,9 +3,9 @@
 <table>
   <tr>
     <th>Hospede</th>
-    <th>Tipo apartamento</th>
-    <th>Data entrada</th>
-    <th>Data saida</th>
+    <th>Tipo de apartamento</th>
+    <th>Data de entrada</th>
+    <th>Data de saida</th>
     <th colspan="3">Opções</th>
   </tr>
 
@@ -17,9 +17,9 @@
     <td><%=h TiposApartamento.find(reserva.fkTiposApartamentos).nome %></td>
     <td><%=h reserva.dataEntrada %></td>
     <td><%=h reserva.dataSaida %></td>
-    <td><%= link_to 'Exibir', reserva %></td>
-    <td><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
-    <td><%= link_to 'Remover', reserva, :confirm => 'Você tem certeza?', :method => :delete %></td>
+    <td width="5%"><%= link_to 'Exibir', reserva %></td>
+    <td width="5%"><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
+    <td width="5%"><%= link_to 'Remover', reserva, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
