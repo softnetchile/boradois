@@ -1,4 +1,13 @@
 <p>
+  <b>Hospede:</b>
+  <%=h Hospede.find(@reserva.fkHospedes).nome %>
+</p>
+
+<p>
+  <b>Tipo apartamento:</b>
+  <%=h TiposApartamento.find(@reserva.fkTiposApartamentos).nome %>
+</p>
+<p>
   <b>Data Entrada:</b>
   <%=h @reserva.dataEntrada %>
 </p>

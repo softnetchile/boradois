@@ -9,8 +9,4 @@ class Hospede < ActiveRecord::Base
 	def self.generos
 		%w[Masculino Feminino]
 	end
-
-	def self.nomes
-		Hospede.find(:all, :select => 'nome').map(&:nome);
-	end
 end
