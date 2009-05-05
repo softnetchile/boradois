@@ -7,9 +7,9 @@ class Reserva < ActiveRecord::Base
 		%w[Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro Novembro Dezembro]
 	end
 
-=begin	
+#=begin	
 	def self.okToReserve(dataEntrada, dataSaida, fkTiposApartamentos)
-		if dataEntrada <= dataSaida then
+		if dataEntrada.to_s <= dataSaida.to_s then
 			@totalAp=Apartamento.count(:conditions => ["fkTiposApartamentos = ?",fkTiposApartamentos])
 			@ocupados=Reserva.count(:conditions => ["fkTiposApartamentos = ? AND (( dataSaida < ? AND dataSaida > ? ) OR (dataEntrada < ? AND dataEntrada > ? ))", fkTiposApartamentos, dataSaida, dataEntrada, dataSaida, dataEntrada])
 			if @ocupados < @totalAp
@@ -19,10 +19,19 @@ class Reserva < ActiveRecord::Base
 		return false
 	end
 
+	def self.dates(dataEntrada, dataSaida)
+		if dataEntrada.to_s <= dataSaida.to_s
+			return false
+		else
+	 		return true
+		end
+	end
+
 	def validate
-		errors.add( "Reserva não pode ser feita") unless Reserva.okToReserve :dataEntrada, :dataSaida, :fkTiposApartamentos
+		errors.add("Data de entrada superior a saida") if Reserva.dates :dataEntrada, :dataSaida
+		#errors.add( "Reserva não pode ser feita") unless Reserva.okToReserve :dataEntrada, :dataSaida, :fkTiposApartamentos
 		#não sei se isso tah ok sem o primeiro argumento... mas passou
 	end
-=end
+#=end
 
 end
