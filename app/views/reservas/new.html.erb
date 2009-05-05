@@ -13,11 +13,11 @@
   </p>
   <p>
     <%= f.label :dataEntrada, "Data de entrada" %><br />
-    <%= f.date_select :dataEntrada, :end_year => Time.now.year+10, :start_year => Time.now.year %>
+    <%= f.date_select :dataEntrada, :end_year => Time.now.year+10, :start_year => Time.now.year, :use_month_names => Reserva.meses %>
   </p>
   <p>
     <%= f.label :dataSaida, "Data de saida" %><br />
-    <%= f.date_select :dataSaida, :end_year => Time.now.year+10, :start_year => Time.now.year %>
+    <%= f.date_select :dataSaida, :end_year => Time.now.year+10, :start_year => Time.now.year, :use_month_names => Reserva.meses %>
   </p>
   <p>
     <%= f.submit "Inserir" %>

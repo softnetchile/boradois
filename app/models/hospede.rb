@@ -9,4 +9,8 @@ class Hospede < ActiveRecord::Base
 	def self.generos
 		%w[Masculino Feminino]
 	end
+
+	def self.meses
+		%w[Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro Novembro Dezembro]
+	end
 end

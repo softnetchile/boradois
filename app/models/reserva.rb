@@ -3,6 +3,10 @@ class Reserva < ActiveRecord::Base
 	belongs_to :tipos_apartamentos
 	belongs_to :hospedes
 
+	def self.meses
+		%w[Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro Novembro Dezembro]
+	end
+
 =begin	
 	def self.okToReserve(dataEntrada, dataSaida, fkTiposApartamentos)
 		if dataEntrada <= dataSaida then
