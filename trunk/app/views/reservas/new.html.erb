@@ -4,6 +4,10 @@
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :hospede %><br />
+	<%= select("hospede","nome", Hospede.nomes , {} , { :new => nil }) %>
+  </p>
+  <p>
     <%= f.label :dataEntrada %><br />
     <%= f.date_select :dataEntrada %>
   </p>
