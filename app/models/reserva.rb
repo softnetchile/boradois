@@ -1,4 +1,5 @@
 class Reserva < ActiveRecord::Base
+	validates_presence_of :fkHospedes, :fkTiposApartamento
 	belongs_to :tipos_apartamentos
 	belongs_to :hospedes
 
