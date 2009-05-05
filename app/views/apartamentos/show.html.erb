@@ -2,6 +2,18 @@
   <b>Número:</b>
   <%=h @apartamento.num %>
 </p>
+<p>
+  <b>Tipo do apartamento:</b>
+  <%=h TiposApartamento.find(@apartamento.fkTiposApartamentos).nome %>
+</p>
+<p>
+  <b>Status:</b>
+  <%if @apartamento.livre-%>
+  	<td>Livre</td>
+  <%else -%>
+	<td>Ocupado</td>
+  <%end -%> 
+</p>
 
 
 <%= link_to 'Editar', edit_apartamento_path(@apartamento) %> |

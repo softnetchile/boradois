@@ -4,8 +4,12 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :num %><br />
+    Número<br />
     <%= f.text_field :num %>
+  </p>
+  <p>
+    Tipo do apartamento<br />
+    <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {:include_blank => true}) %>
   </p>
   <p>
     <%= f.submit "Inserir" %>

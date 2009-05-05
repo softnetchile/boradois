@@ -1,3 +1,9 @@
+2009-05-04 Suzana Matos <suzana.mato@gmail.com>
+* Fixed apartamento
+	- show the status
+	- show the type
+	- combobox of the type
+
 2009-05-04 Iuri Fernandes <iurifq@gmail.com>
 * Added field in "reserva" to select the "hospede" by name.
 
