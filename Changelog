@@ -1,4 +1,8 @@
 2009-05-04 Iuri Fernandes <iurifq@gmail.com>
+* Made validation method okToReserve to be used to validade if there's
+available apartments.
+
+2009-05-04 Iuri Fernandes <iurifq@gmail.com>
 * Finished creation of CRUD reserva.
 
 2009-05-04 Suzana Matos <suzana.mato@gmail.com>
