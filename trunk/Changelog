@@ -1,3 +1,12 @@
+2009-05-05 Suzana Matos <suzana.mato@gmail.com>
+* models :
+	- reserva : tried to fix validation of reserva... (but it isn't working...)
+	- apartamento : included some validations
+* views : 
+	- admin : translated words
+	- hospedes, tipos_apartamentos, servicos, apartamentos : fixed date and some labels
+	- reservas : fixed dates, labels and tipo apartamento(edit)
+
 2009-05-04 Iuri Fernandes <iurifq@gmail.com>
 * Made validation method okToReserve to be used to validade if there's
 available apartments.

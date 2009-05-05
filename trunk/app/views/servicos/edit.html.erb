@@ -1,4 +1,4 @@
-<h1>Editando servico</h1>
+<h1>Editando serviço</h1>
 
 <% form_for(@servico) do |f| %>
   <%= f.error_messages %>
@@ -12,7 +12,7 @@
     <%= f.text_field :valor %>
   </p>
   <p>
-    <%= f.label :descricao %><br />
+    <%= f.label :descricao, 'Descrição' %><br />
     <%= f.text_area :descricao %>
   </p>
   <p>
