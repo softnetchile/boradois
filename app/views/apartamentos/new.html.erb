@@ -9,7 +9,7 @@
   </p>
   <p>
     Tipo do apartamento<br />
-    <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {:include_blank => true}) %>
+    <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {}) %>
   </p>
   <p>
     <%= f.submit "Inserir" %>
