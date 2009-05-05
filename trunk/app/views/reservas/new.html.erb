@@ -5,14 +5,18 @@
 
   <p>
     <%= f.label :hospede %><br />
-	<%= select("hospede","nome", Hospede.nomes , {} , { :new => nil }) %>
+	<%= f.select("fkHospedes", Hospede.all.collect {|h| [ h.nome, h.id ] }, {:include_blank => true}) %>
   </p>
   <p>
-    <%= f.label :dataEntrada %><br />
+    <%= f.label "Tipo de apartamento"%><br />
+  	<%= f.select("fkTiposApartamentos", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {:include_blank => true}) %>
+  </p>
+  <p>
+    <%= f.label "Data de entrada" %><br />
     <%= f.date_select :dataEntrada %>
   </p>
   <p>
-    <%= f.label :dataSaida %><br />
+    <%= f.label "Data de saida" %><br />
     <%= f.date_select :dataSaida %>
   </p>
   <p>

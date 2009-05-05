@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Hospede</th>
+    <th>Tipo apartamento</th>
     <th>Data entrada</th>
     <th>Data saida</th>
     <th colspan="3">Opções</th>
@@ -11,6 +13,8 @@
   for reserva in @reservas 
 	par_impar = 1 - par_impar %>
   <tr class="listLine<%= par_impar %>">
+    <td><%=h Hospede.find(reserva.fkHospedes).nome %></td>
+    <td><%=h TiposApartamento.find(reserva.fkTiposApartamentos).nome %></td>
     <td><%=h reserva.dataEntrada %></td>
     <td><%=h reserva.dataSaida %></td>
     <td><%= link_to 'Exibir', reserva %></td>
