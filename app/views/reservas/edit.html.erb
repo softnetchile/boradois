@@ -1,4 +1,4 @@
-<h1>Editing reserva</h1>
+<h1>Editando reserva</h1>
 
 <% form_for(@reserva) do |f| %>
   <%= f.error_messages %>
@@ -12,9 +12,9 @@
     <%= f.date_select :dataSaida %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+  <%= f.submit "Atualizar" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @reserva %> |
-<%= link_to 'Back', reservas_path %>
+<%= link_to 'Exibir', @reserva %> |
+<%= link_to 'Voltar', reservas_path %>

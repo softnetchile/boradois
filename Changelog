@@ -1,4 +1,11 @@
-2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+2009-05-04 Suzana Matos <suzana.mato@gmail.com>
+* models : 
+	- reservas/apartamentos: included belongs_to function (FK)
+* views : 
+	- reservas/apartamentos/tipos_apartamentos : translated words and
+	fixed index layout
+
+2009-05-04 Suzana Matos <suzana.mato@gmail.com>
 * Fixed createTables 
 	- apartamentos (wrong name in FK)
 	- reservas (wrong name in FK)

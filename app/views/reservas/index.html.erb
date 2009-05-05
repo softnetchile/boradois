@@ -1,22 +1,25 @@
-<h1>Listing reservas</h1>
+<h1>Listando reservas</h1>
 
 <table>
   <tr>
-    <th>Dataentrada</th>
-    <th>Datasaida</th>
+    <th>Data entrada</th>
+    <th>Data saida</th>
+    <th colspan="3">Opções</th>
   </tr>
 
-<% for reserva in @reservas %>
-  <tr>
+<% par_impar = 0
+  for reserva in @reservas 
+	par_impar = 1 - par_impar %>
+  <tr class="listLine<%= par_impar %>">
     <td><%=h reserva.dataEntrada %></td>
     <td><%=h reserva.dataSaida %></td>
-    <td><%= link_to 'Show', reserva %></td>
-    <td><%= link_to 'Edit', edit_reserva_path(reserva) %></td>
-    <td><%= link_to 'Destroy', reserva, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Exibir', reserva %></td>
+    <td><%= link_to 'Editar', edit_reserva_path(reserva) %></td>
+    <td><%= link_to 'Remover', reserva, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New reserva', new_reserva_path %>
+<%= link_to 'Inserir nova reserva', new_reserva_path %>

@@ -1,4 +1,4 @@
-<h1>Editing apartamento</h1>
+<h1>Editando apartamento</h1>
 
 <% form_for(@apartamento) do |f| %>
   <%= f.error_messages %>
@@ -8,9 +8,9 @@
     <%= f.text_field :num %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "Atualizar" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @apartamento %> |
-<%= link_to 'Back', apartamentos_path %>
+<%= link_to 'Exibir', @apartamento %> |
+<%= link_to 'Voltar', apartamentos_path %>

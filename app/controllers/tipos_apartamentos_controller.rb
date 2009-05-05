@@ -1,5 +1,4 @@
 class TiposApartamentosController < ApplicationController
-
   layout 'layout'
   before_filter :authorize
 

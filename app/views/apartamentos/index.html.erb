@@ -1,20 +1,23 @@
-<h1>Listing apartamentos</h1>
+<h1>Listando apartamentos</h1>
 
 <table>
   <tr>
-    <th>Num</th>
+	<th>Num</th>
+	<th colspan="3">Opções</th>
   </tr>
 
-<% for apartamento in @apartamentos %>
-  <tr>
+  <% par_impar = 0
+  for apartamento in @apartamentos 
+	par_impar = 1 - par_impar %>
+  <tr class="listLine<%= par_impar %>">
     <td><%=h apartamento.num %></td>
-    <td><%= link_to 'Show', apartamento %></td>
-    <td><%= link_to 'Edit', edit_apartamento_path(apartamento) %></td>
-    <td><%= link_to 'Destroy', apartamento, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td width="5%"><%= link_to 'Exibir', apartamento %></td>
+    <td width="5%"><%= link_to 'Editar', edit_apartamento_path(apartamento) %></td>
+    <td width="5%"><%= link_to 'Remover', apartamento, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New apartamento', new_apartamento_path %>
+<%= link_to 'Inserir novo apartamento', new_apartamento_path %>
