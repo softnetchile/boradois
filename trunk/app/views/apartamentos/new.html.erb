@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :fkTiposApartamentos, 'Tipo do apartamento'%><br />
-    <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {}) %>
+    <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.find(:all, :order => "nome").collect {|t| [ t.nome, t.id ] }, {}) %>
   </p>
   <p>
     <%= f.submit "Inserir" %>

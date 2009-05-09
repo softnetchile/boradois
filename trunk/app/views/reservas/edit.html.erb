@@ -5,7 +5,7 @@
 
   <p>
     <%= f.label :hospede %><br />
-    <%= f.select("fkHospedes", Hospede.all.collect {|h| [ h.nome, h.id ] }, {}) %>
+    <%= f.select("fkHospedes", Hospede.find(:all, :order => "nome").collect {|h| [ h.nome, h.id ] }, {}) %>
   </p>
   <p>
     <%= f.label :fkTiposApartamentos, "Tipo de apartamento"%><br />

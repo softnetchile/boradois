@@ -5,7 +5,7 @@ class HospedesController < ApplicationController
   # GET /hospedes
   # GET /hospedes.xml
   def index
-    @hospedes = Hospede.find(:all)
+	  @hospedes = Hospede.find(:all, :order => "nome, nascimento, endereco, pais, sexo, estCivil")
 
     respond_to do |format|
       format.html # index.html.erb

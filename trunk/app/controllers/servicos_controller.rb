@@ -5,7 +5,7 @@ class ServicosController < ApplicationController
   # GET /servicos
   # GET /servicos.xml
   def index
-    @servicos = Servico.find(:all)
+    @servicos = Servico.find(:all, :order => "nome, valor")
 
     respond_to do |format|
       format.html # index.html.erb
