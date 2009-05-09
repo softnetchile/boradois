@@ -5,7 +5,7 @@ class ApartamentosController < ApplicationController
   # GET /apartamentos
   # GET /apartamentos.xml
   def index
-    @apartamentos = Apartamento.find(:all)
+    @apartamentos = Apartamento.find(:all, :order => "num")
 
     respond_to do |format|
       format.html # index.html.erb

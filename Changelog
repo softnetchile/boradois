@@ -1,4 +1,13 @@
 2009-05-05 Suzana Matos <suzana.mato@gmail.com>
+* models/reserva : fixed.
+* controllers : changed the order of the lists.
+* views :
+	- hospedes : changed the order of Endereco and Nascimento. 
+	- reservas : changed the order of the list of Hospedes and
+	TiposApartamentos
+	- apartamentos : changed the order of the list of TiposApartamentos
+
+2009-05-05 Suzana Matos <suzana.mato@gmail.com>
 * Fixed table width
 
 2009-05-05 Suzana Matos <suzana.mato@gmail.com>

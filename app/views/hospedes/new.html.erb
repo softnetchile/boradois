@@ -8,12 +8,12 @@
     <%= f.text_field :nome %>
   </p>
   <p>
-    <%= f.label :endereco, 'Endereço' %><br />
-    <%= f.text_field :endereco %>
-  </p>
-  <p>
     <%= f.label :nascimento %><br />
     <%= f.date_select :nascimento, :end_year => Time.now.year, :start_year => Time.now.year-100, :use_month_names => Hospede.meses %>
+  </p>
+  <p>
+    <%= f.label :endereco, 'Endereço' %><br />
+    <%= f.text_field :endereco %>
   </p>
   <p>
     <%= f.label :pais, 'País' %><br />
