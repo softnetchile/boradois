@@ -1,0 +1,13 @@
+<p>
+  <b>Nome:</b>
+  <%=h @tipos_pagamento.nome %>
+</p>
+
+<p>
+  <b>Descrição:</b>
+  <%=h @tipos_pagamento.descricao %>
+</p>
+
+
+<%= link_to 'Editar', edit_tipos_pagamento_path(@tipos_pagamento) %> |
+<%= link_to 'Voltar', tipos_pagamentos_path %>

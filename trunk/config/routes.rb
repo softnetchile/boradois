@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :tipos_pagamentos
+
   map.resources :apartamentos
 
   map.resources :reservas
