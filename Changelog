@@ -1,4 +1,7 @@
 2009-05-23 Suzana Matos <suzana.mato@gmail.com>
+* Created tipos_pagamentos (scaffold) and included it in menu
+
+2009-05-23 Suzana Matos <suzana.mato@gmail.com>
 * boradois.xmi :
 	- fixed
 * public/stylesheets/scaffold :
