@@ -1,11 +1,16 @@
 <% content_for :menu_admin do %>
 <% end %>
 
-
+<h2>:: Hotel</h2>
 <p><%= link_to 'Apartamentos', :controller => "apartamentos", :action => "index" %></p>
-<p><%= link_to 'Hospedes', :controller => "hospedes", :action => "index" %></p>
-<p><%= link_to 'Reservas', :controller => "reservas", :action => "index" %></p>
 <p><%= link_to 'Tipos de apartamentos', :controller => "tipos_apartamentos", :action => "index" %></p>
 <p><%= link_to 'Serviços', :controller => "servicos", :action => "index" %></p>
+
+
+<h2>:: Hospedes</h2>
+<p><%= link_to 'Hospedes', :controller => "hospedes", :action => "index" %></p>
+<p><%= link_to 'Reservas', :controller => "reservas", :action => "index" %></p>
+
+<br>
 <p><%= link_to 'Logout', :controller => "admin", :action => "logout" %></p>
 

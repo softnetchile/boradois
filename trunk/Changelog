@@ -1,3 +1,13 @@
+2009-05-23 Suzana Matos <suzana.mato@gmail.com>
+* boradois.xmi :
+	- fixed
+* public/stylesheets/scaffold :
+	- added <h2> (to use in menu)
+* app/views/shared/_menu_admin.html.erb :
+	- changed the menu view
+* db/createTables :
+	- created all others tables
+
 2009-05-05 Suzana Matos <suzana.mato@gmail.com>
 * models/reserva : fixed.
 * controllers : changed the order of the lists.
