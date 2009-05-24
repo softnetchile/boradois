@@ -1,4 +1,28 @@
+drop table if exists aluguel;
+
+drop table if exists contasApartamentos;
+
+drop table if exists contasPagamentos;
+
+drop table if exists contas;
+
+drop table if exists reservas;
+
+drop table if exists hospedes;
+
 drop table if exists recepcionistas;
+
+drop table if exists apartamentos;
+
+drop table if exists tipos_apartamentos;
+
+drop table if exists servicos;
+
+drop table if exists pagamentos;
+
+drop table if exists tipos_pagamentos;
+
+
 
 create table recepcionistas (
     id            int                not    null auto_increment,
@@ -12,10 +36,6 @@ create table recepcionistas (
     primary key(id)
 ) ENGINE = InnoDB;
 
-drop table if exists reservas;
-
-drop table if exists hospedes;
-
 create table hospedes (
     id            int    not    null auto_increment,
     nome         varchar(100)    not    null,
@@ -26,10 +46,6 @@ create table hospedes (
     estCivil    ENUM('Casado', 'Solteiro', 'Divorciado', 'Viuvo')    not null,
     primary key(id)
 ) ENGINE = InnoDB;
-
-drop table if exists apartamentos;
-
-drop table if exists tipos_apartamentos;
 
 create table tipos_apartamentos (
     id            int                not    null auto_increment,
@@ -48,9 +64,9 @@ create table reservas (
     primary key(id),
     index (fkTiposApartamentos),
     index (fkHospedes),
-    foreign key (fkTiposApartamentos)    references tipos_apartamentos(id)    
+    foreign key (fkTiposApartamentos)    references tipos_apartamentos(id)
     on delete cascade on update cascade,
-    foreign key (fkHospedes)        references hospedes(id)            
+    foreign key (fkHospedes)        references hospedes(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
@@ -65,8 +81,6 @@ create table apartamentos (
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
-drop table if exists servicos;
-
 create table servicos (
     id            int        not null auto_increment,
     nome         varchar(100)        not null,
@@ -75,15 +89,11 @@ create table servicos (
     primary key(id)
 ) ENGINE = InnoDB;
 
-drop table if exists tipos_pagamentos;
-
 create table tipos_pagamentos (
     id        int        not    null auto_increment,
     nome        varchar(100)    not null,
     primary key(id)
 ) ENGINE = InnoDB;
-
-drop table if exists pagamentos;
 
 create table pagamentos (
     id        int        not    null auto_increment,
@@ -95,8 +105,6 @@ create table pagamentos (
     foreign key (fkTiposPagamentos) references tipos_pagamentos(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
-
-drop table if exists contas;
 
 create table contas (
     id        int        not null    auto_increment,
@@ -110,7 +118,6 @@ create table contas (
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
-drop table if exists contasPagamentos;
 
 create table contasPagamentos(
     id    int    not null    auto_increment,
@@ -125,8 +132,6 @@ create table contasPagamentos(
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
-drop table if exists contasApartamentos;
-
 create table contasApartamentos (
     id    int    not null    auto_increment,
     fkContas    int    not null,
@@ -139,9 +144,6 @@ create table contasApartamentos (
     foreign key (fkApartamentos) references apartamentos(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
-
-
-drop table if exists aluguel;
 
 create table aluguel(
     id    int    not null    auto_increment,
