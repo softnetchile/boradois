@@ -5,9 +5,13 @@ class Apartamento < ActiveRecord::Base
 	validates_uniqueness_of :num
 	validates_numericality_of :num
 
+	@livre=true
+
 	def hospedar(hospede,numAcomp,dataEntr,dataSaid)
-		atrib = { :apartamento => self, :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => dataSaid }
+		atrib = { :apartamento => self, :fkHospedes => hospede, :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => dataSaid }
 		c=Conta.new(atrib).save
+		@livre=false
+		self.save
 	end
 
 	protected

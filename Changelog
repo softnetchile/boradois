@@ -1,3 +1,8 @@
+2009-05-24 Iuri Fernandes <iurifq@gmail.com>
+* Finally a "conta" object is been saved. However, it's still necessary to
+set the appartment as occupied
+* Added app/models/conta.rb
+
 2009-05-24 Suzana Matos <suzana.mato@gmail.com>
 * Fixed createTable.sql
 
