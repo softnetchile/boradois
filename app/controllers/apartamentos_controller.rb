@@ -40,6 +40,10 @@ class ApartamentosController < ApplicationController
     @apartamento = Apartamento.find(params[:id])
   end
 
+  def hospedar2
+    @apartamento = Apartamento.find(params[:id]).hospedar(params[:hospede][:id])
+  end
+
   # POST /apartamentos
   # POST /apartamentos.xml
   def create

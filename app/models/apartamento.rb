@@ -5,6 +5,10 @@ class Apartamento < ActiveRecord::Base
 	validates_uniqueness_of :num
 	validates_numericality_of :num
 
+	def hospedar(hospede)
+		Conta.new(self,hospede).save
+	end
+
 	protected
 	def validate
 		errors.add(:num, "deve ser positivo") unless num.nil? || num > 0.0
