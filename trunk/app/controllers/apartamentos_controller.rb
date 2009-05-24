@@ -41,7 +41,7 @@ class ApartamentosController < ApplicationController
   end
 
   def hospedar2
-    Apartamento.find(params[:id]).hospedar(params[:hospede][:id],7,Date.new(12122005),Date.new(12122008))
+    Apartamento.find(params[:id]).hospedar(params[:hospede][:id],params[:acompanhantes][:num],Date.new(12122005),Date.new(12122008))
   end
 
   # POST /apartamentos
