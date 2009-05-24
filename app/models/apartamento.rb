@@ -5,8 +5,9 @@ class Apartamento < ActiveRecord::Base
 	validates_uniqueness_of :num
 	validates_numericality_of :num
 
-	def hospedar(hospede)
-		Conta.new(self,hospede).save
+	def hospedar(hospede,numAcomp,dataEntr,dataSaid)
+		atrib = { :apartamento => self, :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => dataSaid }
+		c=Conta.new(atrib).save
 	end
 
 	protected
