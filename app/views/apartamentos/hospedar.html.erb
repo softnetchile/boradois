@@ -1,0 +1,17 @@
+<h1>Hospedando em apartamento</h1>
+
+<% form_tag :action => "hospedar2" do %>
+  <p>
+    <%= label_tag :hospede %><br />
+    <%= select("hospede","id", Hospede.find(:all, :order => "nome").collect {|h| [ h.nome, h.id ] }, {}) %>
+	<%= hidden_field_tag 'id', params[:id] %>
+  </p>
+  <p>
+    <%= label_tag :acompanhantes %><br />
+    <%= select("acompanhantes","num", 0..10, {}) %>
+	<%= hidden_field_tag 'id', params[:id] %>
+  </p>
+  <p>
+    <%= submit_tag "Hospedar" %>
+  </p>
+<% end %>

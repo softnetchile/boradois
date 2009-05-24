@@ -1,4 +1,9 @@
 2009-05-24 Iuri Fernandes <iurifq@gmail.com>
+* Forgot to add app/views/apartamento/hospedar.html.erb
+* Created link in "apartamento" to "hospedar"
+* Date selection of entrance and exit are missing
+
+2009-05-24 Iuri Fernandes <iurifq@gmail.com>
 * Finally a "conta" object is been saved. However, it's still necessary to
 set the appartment as occupied
 * Added app/models/conta.rb
