@@ -1,4 +1,9 @@
 2009-05-25 Iuri Fernandes <iurifq@gmail.com>
+* Fixed hidden field in views/alugueis/new.html.erb
+* Fixed some bugs in alugueis controller, but its necessary to fix the model
+to adjust to the database 
+
+2009-05-25 Iuri Fernandes <iurifq@gmail.com>
 * Created "contratação de aluguel"
 
 2009-05-25 Iuri Fernandes <iurifq@gmail.com>
