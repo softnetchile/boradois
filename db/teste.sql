@@ -15,7 +15,7 @@ insert into boradois_development.apartamentos values ('', '2', '1', true);
 insert into boradois_development.apartamentos values ('', '3', '1', true);
 insert into boradois_development.apartamentos values ('', '4', '2', true);
 
-insert into boradois_development.servicos values ('', 'Teolha', '5.0', 'Toelha para banho.');
+insert into boradois_development.servicos values ('', 'Toalha', '5.0', 'Toalha para banho.');
 insert into boradois_development.servicos values ('', 'Frigobar', '15.0', 'Frigobar no quarto, não contando o preço do que tem dentro.');
 insert into boradois_development.servicos values ('', 'Serviço de quarto', '25.0', 'Entregar a comida/bebida no quarto.');
 

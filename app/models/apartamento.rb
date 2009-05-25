@@ -7,8 +7,8 @@ class Apartamento < ActiveRecord::Base
 	validates_uniqueness_of :num
 	validates_numericality_of :num
 
-	def hospedar(hospede,numAcomp,dataEntr,dataSaid)
-		atrib = { :apartamento => self, :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => dataSaid }
+	def hospedar(hospede,numAcomp,dataEntr)
+		atrib = { :apartamento => self, :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => 'null' }
 		c = Conta.new(atrib)
 		c.save
 		@conta = c

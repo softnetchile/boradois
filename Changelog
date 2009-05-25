@@ -1,10 +1,16 @@
+2009-05-25 Suzana Matos <suzana.matos@gmail.com>
+* Fixed teste.sql (wrong word)
+* contas/show.html.erb : changed table name
+* controllers/apartamentos_controller.rb : fixed dataSaid
+* models/apartamento.rb : fixed dataSaid (the null need '')
+
 2009-05-25 Iuri Fernandes <iurifq@gmail.com>
 * Fixed bug in redirect after aluguel deletion
 
-2009-05-25 Suzana Matos <suzana.mato@gmail.com>
+2009-05-25 Suzana Matos <suzana.matos@gmail.com>
 * Fixed teste.sql (the true in apartamentos must be without '')
 
-2009-05-25 Suzana Matos <suzana.mato@gmail.com>
+2009-05-25 Suzana Matos <suzana.matos@gmail.com>
 * Created a teste.sql to populate the BD
 * createTable.sql : fixed dataSaid in conta
 * apartamentos_controller.rb : fixed dataEntrad with the current datetime and
@@ -40,7 +46,7 @@ to adjust to the database
 * Modified createTables.sql to fit better to the application
 * Adjusted some details in "conta" and "apartamento" models
 
-2009-05-24 Suzana Matos <suzana.mato@gmail.com>
+2009-05-24 Suzana Matos <suzana.matos@gmail.com>
 * Fixed createTable.sql again...
 
 2009-05-24 Iuri Fernandes <iurifq@gmail.com>
@@ -53,7 +59,7 @@ to adjust to the database
 set the appartment as occupied
 * Added app/models/conta.rb
 
-2009-05-24 Suzana Matos <suzana.mato@gmail.com>
+2009-05-24 Suzana Matos <suzana.matos@gmail.com>
 * Fixed createTable.sql
 
 2009-05-24 Iuri Fernandes <iurifq@gmail.com>
@@ -62,10 +68,10 @@ set the appartment as occupied
 2009-05-24 Iuri Fernandes <iurifq@gmail.com>
 * Created hospedar action, but it is still not working
 
-2009-05-23 Suzana Matos <suzana.mato@gmail.com>
+2009-05-23 Suzana Matos <suzana.matos@gmail.com>
 * Created tipos_pagamentos (scaffold) and included it in menu
 
-2009-05-23 Suzana Matos <suzana.mato@gmail.com>
+2009-05-23 Suzana Matos <suzana.matos@gmail.com>
 * boradois.xmi :
 	- fixed
 * public/stylesheets/scaffold :
@@ -75,7 +81,7 @@ set the appartment as occupied
 * db/createTables :
 	- created all others tables
 
-2009-05-05 Suzana Matos <suzana.mato@gmail.com>
+2009-05-05 Suzana Matos <suzana.matos@gmail.com>
 * models/reserva : fixed.
 * controllers : changed the order of the lists.
 * views :
@@ -84,10 +90,10 @@ set the appartment as occupied
 	TiposApartamentos
 	- apartamentos : changed the order of the list of TiposApartamentos
 
-2009-05-05 Suzana Matos <suzana.mato@gmail.com>
+2009-05-05 Suzana Matos <suzana.matos@gmail.com>
 * Fixed table width
 
-2009-05-05 Suzana Matos <suzana.mato@gmail.com>
+2009-05-05 Suzana Matos <suzana.matos@gmail.com>
 * Tranlated months' names 
 
 2009-05-05 Iuri Fernandes <iurifq@gmail.com>
@@ -99,7 +105,7 @@ set the appartment as occupied
 2009-05-05 Iuri Fernandes <iurifq@gmail.com>
 * Commented okToReserve method
 
-2009-05-05 Suzana Matos <suzana.mato@gmail.com>
+2009-05-05 Suzana Matos <suzana.matos@gmail.com>
 * models :
 	- reserva : tried to fix validation of reserva... (but it isn't working...)
 	- apartamento : included some validations
@@ -115,10 +121,10 @@ available apartments.
 2009-05-04 Iuri Fernandes <iurifq@gmail.com>
 * Finished creation of CRUD reserva.
 
-2009-05-04 Suzana Matos <suzana.mato@gmail.com>
+2009-05-04 Suzana Matos <suzana.matos@gmail.com>
 * Fixed combobox
 
-2009-05-04 Suzana Matos <suzana.mato@gmail.com>
+2009-05-04 Suzana Matos <suzana.matos@gmail.com>
 * Fixed apartamento
 	- show the status
 	- show the type
@@ -127,14 +133,14 @@ available apartments.
 2009-05-04 Iuri Fernandes <iurifq@gmail.com>
 * Added field in "reserva" to select the "hospede" by name.
 
-2009-05-04 Suzana Matos <suzana.mato@gmail.com>
+2009-05-04 Suzana Matos <suzana.matos@gmail.com>
 * models : 
 	- reservas/apartamentos: included belongs_to function (FK)
 * views : 
 	- reservas/apartamentos/tipos_apartamentos : translated words and
 	fixed index layout
 
-2009-05-04 Suzana Matos <suzana.mato@gmail.com>
+2009-05-04 Suzana Matos <suzana.matos@gmail.com>
 * Fixed createTables 
 	- apartamentos (wrong name in FK)
 	- reservas (wrong name in FK)
@@ -160,17 +166,17 @@ available apartments.
 * Modified createTables script to create TiposApartamentos. It's not working
 yet.
 
-2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+2009-05-03 Suzana Matos <suzana.matos@gmail.com>
 * app/views/admin : 
 	- index : fixed wrong words
 	- login : fixed the colspan just to be cute(?)
 * public/stylesheets/scaffold : 
 	- hide empty-cells in table
 
-2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+2009-05-03 Suzana Matos <suzana.matos@gmail.com>
 * views/layouts/layout : fixed session => show the right menu now
 
-2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+2009-05-03 Suzana Matos <suzana.matos@gmail.com>
 * controllers :
 	- hospedes : added layout
 	- servicos : added layout
@@ -185,7 +191,7 @@ yet.
 	- index : added 
 	- login : fixed identation
 
-2009-05-03 Suzana Matos <suzana.mato@gmail.com>
+2009-05-03 Suzana Matos <suzana.matos@gmail.com>
 * Modified public/stylesheets/scaffold.css
 	-Created CSS for 
 		. body
@@ -210,12 +216,12 @@ yet.
 2009-05-02 Iuri Fernandes <iurifq@gmail.com>
 * Moved possible 'generos' and 'estados civis" from views to controllers.
 
-2009-05-02 Suzana Matos <suzana.mato@gmail.com>
+2009-05-02 Suzana Matos <suzana.matos@gmail.com>
 * Fixed combobox in Hospede:
 	- edit
 	- new
 
-2009-05-02 Suzana Matos <suzana.mato@gmail.com>
+2009-05-02 Suzana Matos <suzana.matos@gmail.com>
 * Translated the form labels to Portuguese
 * Fixed class diagram
 	- Deleted nasc, the duplication of nascimento
