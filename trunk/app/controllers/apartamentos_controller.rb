@@ -41,7 +41,7 @@ class ApartamentosController < ApplicationController
   end
 
   def hospedar2
-    Apartamento.find(params[:id]).hospedar(params[:hospede][:id],params[:acompanhantes][:num],1.hour.from_now,NULL)
+    Apartamento.find(params[:id]).hospedar(params[:hospede][:id],params[:acompanhantes][:num],1.hour.from_now)
 	redirect_to :action => "index"
   end
 
