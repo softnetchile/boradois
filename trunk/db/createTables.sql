@@ -1,3 +1,5 @@
+SET FOREIGN_KEY_CHECKS=0;
+
 drop table if exists recepcionistas;
 
 drop table if exists reservas;
@@ -110,7 +112,7 @@ create table contas (
     id        int        not null    auto_increment,
     numAcomp    int    not    null,
     dataEntr    datetime    not null,
-    dataSaid    datetime    not null,
+    dataSaid    datetime,
     hospede_id     int not null,
     apartamento_id     int not null,
     primary key(id),
