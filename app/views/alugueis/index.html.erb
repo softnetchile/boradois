@@ -1,0 +1,23 @@
+<h1>Serviços possíveis</h1>
+
+<table>
+  <tr> 
+    <th>Nome</th>
+    <th>Valor</th>
+    <th>Descrição</th>
+  </tr>
+
+<% par_impar = 0;
+  for servico in @servicos 
+	  par_impar = 1 - par_impar %>
+  <tr class="listLine<%= par_impar %>">
+    <td><%=link_to servico.nome, :action => "new", :serv => servico.id, :ap => @apartamento.id %></td>
+    <td><%=h servico.valor %></td>
+    <td><%=h servico.descricao %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Voltar', apartamentos_path %>
