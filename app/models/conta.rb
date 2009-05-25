@@ -1,9 +1,8 @@
 class Conta < ActiveRecord::Base
-	belongs_to :apartamento
-	has_one :hospede
-#	has_many :despesas
 
-	@fkHospedes
+	belongs_to :apartamento
+	belongs_to :hospede
+#	has_many :itens
 
 	def initialize attributes = {}
 		super

@@ -42,6 +42,7 @@ class ApartamentosController < ApplicationController
 
   def hospedar2
     Apartamento.find(params[:id]).hospedar(params[:hospede][:id],params[:acompanhantes][:num],Date.new(12122005),Date.new(12122008))
+	redirect_to :action => "index"
   end
 
   # POST /apartamentos

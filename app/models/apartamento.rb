@@ -1,16 +1,18 @@
 class Apartamento < ActiveRecord::Base
+
+	has_one :conta
 	belongs_to :tipos_apartamentos
 	
 	validates_presence_of :num, :fkTiposApartamentos
 	validates_uniqueness_of :num
 	validates_numericality_of :num
 
-	@livre=true
-
 	def hospedar(hospede,numAcomp,dataEntr,dataSaid)
-		atrib = { :apartamento => self, :fkHospedes => hospede, :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => dataSaid }
-		c=Conta.new(atrib).save
-		@livre=false
+		atrib = { :apartamento => self, :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => dataSaid }
+		c = Conta.new(atrib)
+		c.save
+		@conta = c
+		self.livre=false
 		self.save
 	end
 
