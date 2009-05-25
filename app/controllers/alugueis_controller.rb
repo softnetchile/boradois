@@ -41,8 +41,10 @@ class AlugueisController < ApplicationController
   # POST /alugueis
   # POST /alugueis.xml
   def create
-	params[:aluguel][:apartamento] = Apartamento.find(params[:aluguel][:apartamento])
+	params[:aluguel][:conta] = Apartamento.find(params[:aluguel][:apartamento]).conta
 	params[:aluguel][:servico] = Servico.find(params[:aluguel][:servico])
+	params[:aluguel][:dataHora] = DateTime.now
+	params[:aluguel].delete(:apartamento)
     @aluguel = Aluguel.new(params[:aluguel])
 
     respond_to do |format|
