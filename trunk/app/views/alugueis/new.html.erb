@@ -3,17 +3,27 @@
 <% form_for(@aluguel) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :num, 'Número' %><br />
-    <%= f.text_field :num %>
-  </p>
-  <p>
-    <%= f.label :fkTiposApartamentos, 'Tipo do apartamento'%><br />
-    <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.find(:all, :order => "nome").collect {|t| [ t.nome, t.id ] }, {}) %>
-  </p>
-  <p>
-    <%= f.submit "Inserir" %>
-  </p>
+<p>
+  <b>Nome:</b>
+  <%=h @servico.nome %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%=h @servico.valor %>
+</p>
+
+<p>
+  <b>Descrição:</b>
+  <%=h @servico.descricao %>
+</p>
+<p>
+  <%= f.hidden_field 'ap', @apartamento.id %>
+</p>
+<p>
+  <%= f.submit "Contratar" %>
+</p>
+
 <% end %>
 
-<%= link_to 'Voltar', apartamentos_path %>
+<%= link_to 'Voltar', :controller => :alugueis, :ap => @apartamento.id %>

@@ -2,6 +2,16 @@ class AlugueisController < ApplicationController
   layout 'layout'
   before_filter :authorize
 
+  def index
+    @servicos = Servico.find(:all, :order => "nome, valor")
+    @apartamento = Apartamento.find(params[:ap])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @servicos }
+    end
+  end
+
   # GET /alugueis
   # GET /alugueis.xml
   # GET /alugueis/1
@@ -19,6 +29,8 @@ class AlugueisController < ApplicationController
   # GET /alugueis/new.xml
   def new
     @aluguel = Aluguel.new
+	@servico = Servico.find(params[:serv])
+	@apartamento = Apartamento.find(params[:ap])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -29,6 +41,7 @@ class AlugueisController < ApplicationController
   # POST /alugueis
   # POST /alugueis.xml
   def create
+#	params[:conta]= Conta.find(:apartamento => 
     @aluguel = Aluguel.new(params[:aluguel])
 
     respond_to do |format|
