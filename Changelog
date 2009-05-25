@@ -1,3 +1,10 @@
+2009-05-24 Suzana Matos <suzana.mato@gmail.com>
+* Created a teste.sql to populate the BD
+* createTable.sql : fixed dataSaid in conta
+* apartamentos_controller.rb : fixed dataEntrad with the current datetime and
+the dataSaid with null
+* hospedar.html.erb : put link to go back to apartamentos index
+
 2009-05-25 Iuri Fernandes <iurifq@gmail.com>
 * Fixed some bugs in alugueis controller, it now works!
 * Fixed some links.
