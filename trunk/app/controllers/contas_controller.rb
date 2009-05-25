@@ -3,7 +3,7 @@ class ContasController < ApplicationController
   before_filter :authorize
 
   def show
-    @conta = Apartamento.find(params[:id]).conta
+    @conta = Conta.find(params[:id])
 	@alugueis = Aluguel.find(:all,:conditions => [" conta_id = ?", @conta.id])
 
     respond_to do |format|
