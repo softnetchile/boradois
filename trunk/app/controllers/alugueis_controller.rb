@@ -63,10 +63,11 @@ class AlugueisController < ApplicationController
   # DELETE /alugueis/1.xml
   def destroy
     @aluguel = Aluguel.find(params[:id])
+	conta_id = @aluguel.conta.id
     @aluguel.destroy
 
     respond_to do |format|
-      format.html { redirect_to(alugueis_url) }
+      format.html { redirect_to(:controller => "contas", :action => "show", :id => conta_id) }
       format.xml  { head :ok }
     end
   end
