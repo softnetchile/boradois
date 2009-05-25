@@ -17,9 +17,8 @@
   <b>Descrição:</b>
   <%=h @servico.descricao %>
 </p>
-<p>
-  <%= f.hidden_field 'ap', @apartamento.id %>
-</p>
+  <%= f.hidden_field 'apartamento', :value => @apartamento.id %>
+  <%= f.hidden_field 'servico', :value => @servico.id %>
 <p>
   <%= f.submit "Contratar" %>
 </p>
