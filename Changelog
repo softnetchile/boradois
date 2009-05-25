@@ -1,4 +1,7 @@
 2009-05-25 Suzana Matos <suzana.matos@gmail.com>
+* Fixed bug in alugueis selection in controllers/contas_controller.rb
+
+2009-05-25 Suzana Matos <suzana.matos@gmail.com>
 * Fixed teste.sql (wrong word)
 * contas/show.html.erb : changed table name
 * controllers/apartamentos_controller.rb : fixed dataSaid
