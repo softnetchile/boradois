@@ -1,0 +1,12 @@
+<p>
+  <b>Nome:</b>
+  <%=h @aluguel.servico.nome %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%=h @aluguel.dataHora %>
+</p>
+
+
+<%= link_to 'Voltar', :controller => "contas", :action => "show", :id => @aluguel.conta.id%>
