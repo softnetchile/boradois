@@ -4,7 +4,7 @@ class ContasController < ApplicationController
 
   def show
     @conta = Apartamento.find(params[:id]).conta
-	@alugueis = Aluguel.find(:all)
+	@alugueis = Aluguel.find(:all,:conditions => [" conta_id = ?", @conta.id])
 
     respond_to do |format|
       format.html # show.html.erb
