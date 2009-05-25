@@ -10,10 +10,10 @@ insert into boradois_development.tipos_apartamentos values ('', 'Presidencial', 
 insert into boradois_development.reservas values ('', '1', '1', '2009-05-26', NULL);
 insert into boradois_development.reservas values ('', '1', '1', '2009-09-26', '2009-10-04');
 
-insert into boradois_development.apartamentos values ('', '1', '1', 'true');
-insert into boradois_development.apartamentos values ('', '2', '1', 'true');
-insert into boradois_development.apartamentos values ('', '3', '1', 'true');
-insert into boradois_development.apartamentos values ('', '4', '2', 'true');
+insert into boradois_development.apartamentos values ('', '1', '1', true);
+insert into boradois_development.apartamentos values ('', '2', '1', true);
+insert into boradois_development.apartamentos values ('', '3', '1', true);
+insert into boradois_development.apartamentos values ('', '4', '2', true);
 
 insert into boradois_development.servicos values ('', 'Teolha', '5.0', 'Toelha para banho.');
 insert into boradois_development.servicos values ('', 'Frigobar', '15.0', 'Frigobar no quarto, não contando o preço do que tem dentro.');

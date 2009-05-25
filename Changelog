@@ -1,4 +1,7 @@
-2009-05-24 Suzana Matos <suzana.mato@gmail.com>
+2009-05-25 Suzana Matos <suzana.mato@gmail.com>
+* Fixed teste.sql (the true in apartamentos must be without '')
+
+2009-05-25 Suzana Matos <suzana.mato@gmail.com>
 * Created a teste.sql to populate the BD
 * createTable.sql : fixed dataSaid in conta
 * apartamentos_controller.rb : fixed dataEntrad with the current datetime and
