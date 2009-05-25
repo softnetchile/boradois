@@ -1,0 +1,19 @@
+<h1>Contratando serviço</h1>
+
+<% form_for(@aluguel) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :num, 'Número' %><br />
+    <%= f.text_field :num %>
+  </p>
+  <p>
+    <%= f.label :fkTiposApartamentos, 'Tipo do apartamento'%><br />
+    <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.find(:all, :order => "nome").collect {|t| [ t.nome, t.id ] }, {}) %>
+  </p>
+  <p>
+    <%= f.submit "Inserir" %>
+  </p>
+<% end %>
+
+<%= link_to 'Voltar', apartamentos_path %>

@@ -1,6 +1,7 @@
 class Aluguel < ActiveRecord::Base
+	set_table_name 'alugueis'
 
 	belongs_to :apartamento
-	has_one :servico
+	belongs_to :servico
 
 end
