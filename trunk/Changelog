@@ -1,4 +1,8 @@
-2009-05-24 Iuri Fernandes <iurifq@gmail.com>
+2009-05-25 Iuri Fernandes <iurifq@gmail.com>
+* Renamed some columns in createTables.sql
+* Created "aluguel" model
+
+2009-05-25 Iuri Fernandes <iurifq@gmail.com>
 * Added link in "apartamento" to "conta"
 * Created show view and controller to "conta"
 * Modified createTables.sql to fit better to the application

@@ -14,9 +14,11 @@
 	<td>Ocupado</td>
   <%end -%> 
 </p>
+<%if @apartamento.livre-%>
 <p>
   <%= link_to 'Hospedar', :action => "hospedar", :id => @apartamento.id %>
 </p>
+<%end -%> 
 
 <%if not @apartamento.livre-%>
 <p>

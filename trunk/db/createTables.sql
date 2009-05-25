@@ -151,14 +151,14 @@ create table contas_apartamentos (
 
 create table aluguel(
     id    int    not null    auto_increment,
-    fkContas    int    not null,
-    fkServicos    int    not null,
+    conta_id    int    not null,
+    servico_id    int    not null,
     dataHora    datetime    not null,
     primary key(id),
-    index (fkContas),
-    index (fkServicos),
-    foreign key (fkContas) references contas(id)
+    index (conta_id),
+    index (servico_id),
+    foreign key (conta_id) references contas(id)
     on delete cascade on update cascade,
-    foreign key (fkServicos) references servicos(id)
+    foreign key (servico_id) references servicos(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
