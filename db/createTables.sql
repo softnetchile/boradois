@@ -6,7 +6,7 @@ drop table if exists contas_apartamentos;
 
 drop table if exists contas_pagamentos;
 
-drop table if exists aluguel;
+drop table if exists alugueis;
 
 drop table if exists servicos;
 
@@ -149,7 +149,7 @@ create table contas_apartamentos (
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
-create table aluguel(
+create table alugueis(
     id    int    not null    auto_increment,
     conta_id    int    not null,
     servico_id    int    not null,
