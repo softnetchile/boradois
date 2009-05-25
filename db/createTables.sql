@@ -1,20 +1,12 @@
-drop table if exists aluguel;
-
-drop table if exists contasApartamentos;
-
-drop table if exists contasPagamentos;
-
-drop table if exists contas;
+drop table if exists recepcionistas;
 
 drop table if exists reservas;
 
-drop table if exists hospedes;
+drop table if exists contas_apartamentos;
 
-drop table if exists recepcionistas;
+drop table if exists contas_pagamentos;
 
-drop table if exists apartamentos;
-
-drop table if exists tipos_apartamentos;
+drop table if exists aluguel;
 
 drop table if exists servicos;
 
@@ -22,6 +14,13 @@ drop table if exists pagamentos;
 
 drop table if exists tipos_pagamentos;
 
+drop table if exists contas;
+
+drop table if exists hospedes;
+
+drop table if exists apartamentos;
+
+drop table if exists tipos_apartamentos;
 
 
 create table recepcionistas (
@@ -92,6 +91,7 @@ create table servicos (
 create table tipos_pagamentos (
     id        int        not    null auto_increment,
     nome        varchar(100)    not null,
+    descricao    text            not null,
     primary key(id)
 ) ENGINE = InnoDB;
 
@@ -119,7 +119,7 @@ create table contas (
 ) ENGINE = InnoDB;
 
 
-create table contasPagamentos(
+create table contas_pagamentos(
     id    int    not null    auto_increment,
     fkPagamentos    int    not null,
     fkContas    int    not null,
@@ -132,7 +132,7 @@ create table contasPagamentos(
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
-create table contasApartamentos (
+create table contas_apartamentos (
     id    int    not null    auto_increment,
     fkContas    int    not null,
     fkApartamentos    int    not null,
