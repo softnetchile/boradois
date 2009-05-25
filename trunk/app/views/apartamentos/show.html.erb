@@ -18,6 +18,12 @@
   <%= link_to 'Hospedar', :action => "hospedar", :id => @apartamento.id %>
 </p>
 
+<%if not @apartamento.livre-%>
+<p>
+  <%=link_to 'Conta', :controller => "contas", :action => "show", :id => @apartamento.id %>
+</p>
+<%end -%> 
+
 
 <%= link_to 'Editar', edit_apartamento_path(@apartamento) %> |
 <%= link_to 'Voltar', apartamentos_path %>

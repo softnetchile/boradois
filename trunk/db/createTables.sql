@@ -111,10 +111,14 @@ create table contas (
     numAcomp    int    not    null,
     dataEntr    datetime    not null,
     dataSaid    datetime    not null,
-    fkHospedes     int not null,
+    hospede_id     int not null,
+    apartamento_id     int not null,
     primary key(id),
-    index (fkHospedes),
-    foreign key (fkHospedes) references hospedes(id)
+    index (hospede_id),
+    foreign key (hospede_id) references hospedes(id)
+    on delete cascade on update cascade,
+    index (apartamento_id),
+    foreign key (apartamento_id) references apartamentos(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
