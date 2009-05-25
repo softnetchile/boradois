@@ -1,4 +1,7 @@
-2009-05-25 Suzana Matos <suzana.matos@gmail.com>
+2009-05-25 Iuri Fernandes <iurifq@gmail.com>
+* Fixed contas' and apartamentos' id bug
+
+2009-05-25 Iuri Fernandes <iurifq@gmail.com>
 * Fixed bug in alugueis selection in controllers/contas_controller.rb
 
 2009-05-25 Suzana Matos <suzana.matos@gmail.com>
