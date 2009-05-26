@@ -33,15 +33,10 @@ class ContasController < ApplicationController
   	@contas = case params[:st]
   		when '0' then Conta.find(:all,:conditions => ["encerrada = false"])
   		when '1' then Conta.find(:all,:conditions => ["encerrada = true"])
-  		when '2' then Conta.find(:all,:conditions => ["encerrada = true"])
   	end
-#	if params[:st]='2'
-#		for conta in @contas
-#	end
 	@estado_conta = case params[:st]
 	   when '0' then "Ativas"
 	   when '1' then "Encerradas"
-	   when '2' then "Esperando Pagamento"
 	end
     respond_to do |format|
       format.html
