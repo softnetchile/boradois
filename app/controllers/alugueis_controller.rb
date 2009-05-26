@@ -41,13 +41,14 @@ class AlugueisController < ApplicationController
   # POST /alugueis
   # POST /alugueis.xml
   def create
-	  @apartamento_id = params[:aluguel][:apartamento]
-	  @conta_id = ContasApartamento.find(:first, :conditions => ["apartamento_id = ?",@apartamento_id]).conta_id
+	@apartamento_id = params[:aluguel][:apartamento]
+	@conta_id = ContasApartamento.find(:first, :conditions => ["apartamento_id = ?",@apartamento_id]).conta_id
 
+	params[:aluguel][:apartamento] = Apartamento.find(@apartamento_id)
+	params[:aluguel][:conta] = Conta.find(@conta_id)
 	params[:aluguel][:conta] = Conta.find(@conta_id)
 	params[:aluguel][:servico] = Servico.find(params[:aluguel][:servico])
 	params[:aluguel][:dataHora] = DateTime.now
-	params[:aluguel].delete(:apartamento)
     @aluguel = Aluguel.new(params[:aluguel])
 
     respond_to do |format|

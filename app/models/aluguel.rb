@@ -3,5 +3,6 @@ class Aluguel < ActiveRecord::Base
 
 	belongs_to :conta
 	belongs_to :servico
+	belongs_to :apartamento
 
 end
