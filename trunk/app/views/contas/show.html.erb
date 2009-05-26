@@ -48,6 +48,16 @@
 </table>
 
 <p>
+	<%
+		if @conta.encerrada
+	%>
+	<%= link_to 'Pagar', :action => "pagar", :id => @conta.id %>
+	<%
+		else
+	%>
 	<%= link_to 'Encerrar', :action => "encerrar", :id => @conta.id %>
+	<%
+		end
+	%>
 </p>
 <%= link_to 'Voltar', :controller => "apartamentos", :action => "show", :id => ContasApartamento.find(:last, :conditions => ["conta_id = ?", @conta.id] ).apartamento_id %>
