@@ -5,7 +5,7 @@ class ReservasController < ApplicationController
   # GET /reservas
   # GET /reservas.xml
   def index
-    @reservas = Reserva.find(:all, :order => "dataEntrada, dataSaida, fkTiposApartamentos, fkHospedes")
+    @reservas = Reserva.find(:all, :order => "dataEntrada, dataSaida, tiposApartamento_id, hospede_id")
 
     respond_to do |format|
       format.html # index.html.erb

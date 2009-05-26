@@ -5,11 +5,11 @@
 
   <p>
     <%= f.label :hospede %><br />
-    <%= f.select("fkHospedes", Hospede.find(:all, :order => "nome").collect {|h| [ h.nome, h.id ] }, {}) %>
+    <%= f.select("hospede_id", Hospede.find(:all, :order => "nome").collect {|h| [ h.nome, h.id ] }, {}) %>
   </p>
   <p>
-    <%= f.label :fkTiposApartamentos, "Tipo de apartamento"%><br />
-    <%= f.select("fkTiposApartamentos", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {}) %>
+    <%= f.label :tiposApartamento_id, "Tipo de apartamento"%><br />
+    <%= f.select("tiposApartamento_id", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {}) %>
   </p>
   <p>
     <%= f.label :dataEntrada, "Data de entrada" %><br />

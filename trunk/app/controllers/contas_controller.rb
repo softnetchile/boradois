@@ -11,4 +11,16 @@ class ContasController < ApplicationController
       format.xml  { render :xml => @conta }
     end
   end
+  
+  def encerrar
+    @conta = Conta.find(params[:id])
+	@alugueis = Aluguel.find(:all,:conditions => ["conta_id = ?", @conta.id])
+	@apts = ContasApartamento.find(:all, :conditions => ["conta_id = ?", @conta.id])
+
+    respond_to do |format|
+      format.html # encerrar.html.erb
+      format.xml  { render :xml => @conta }
+    end
+
+  end
 end

@@ -8,8 +8,8 @@
     <%= f.text_field :num %>
   </p>
   <p>
-    <%= f.label :fkTiposApartamentos, 'Tipo do apartamento'%><br />
-    <%= select("apartamento", "fkTiposApartamentos", TiposApartamento.find(:all, :order => "nome").collect {|t| [ t.nome, t.id ] }, {}) %>
+    <%= f.label :tiposApartamento_id, 'Tipo do apartamento'%><br />
+    <%= select("apartamento", "tiposApartamento_id", TiposApartamento.find(:all, :order => "nome").collect {|t| [ t.nome, t.id ] }, {}) %>
   </p>
   <p>
     <%= f.submit "Inserir" %>
