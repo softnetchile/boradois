@@ -1,3 +1,30 @@
+2009-05-26 Suzana Matos <suzana.matos@gmail.com>
+* db/createTable.sql : 
+	- added lotação in tipos_apartamentos
+	- created contas_encerradas
+	- fixed FK contas to contaS_encerradas in contas_pagamentos
+	- fixed FK names in contas_partamentos (we have to do this in all
+	tables)
+	- removed FK constraints of conta_id in alugueis
+* db/teste.sql : 
+	- inserted one more hospede
+	- added lotação in tipos_apartamentos
+	- changed date in reservas
+	- changed livre of just one apartamento
+		- to make a conta after
+	- inserted conta using apartamento 1 and hospede 1
+	- inserted the relationship of apartamento and conta
+	- inserted two aluguis for it
+* models/conta : conta don't have apartamento anymore
+* models/apartamento : 
+	- fixed atributs
+	- updated contas_apartamentos
+* modelts/contas_apartamento : created
+* controllers/alugueis : fixed the way to get conta with apartamento (using
+ContasApartamento)
+* views/contas/show : fixed the way to get apartamento with conta
+* view/apartamentos/show : fixed the way to get conta with apartamento 
+
 2009-05-25 Iuri Fernandes <iurifq@gmail.com>
 * Fixed contas' and apartamentos' id bug
 

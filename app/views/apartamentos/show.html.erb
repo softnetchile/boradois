@@ -22,7 +22,7 @@
 
 <%if not @apartamento.livre-%>
 <p>
-  <%=link_to 'Conta', :controller => "contas", :action => "show", :id => @apartamento.conta.id %> |
+  <%=link_to 'Conta', :controller => "contas", :action => "show", :id => ContasApartamento.find(:first, :conditions => ["apartamento_id = ?", @apartamento.id] ).conta_id %> |
   <%=link_to 'Contratar servico', :controller => "alugueis", :ap => @apartamento.id %>
 </p>
 <%end -%> 

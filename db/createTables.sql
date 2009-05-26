@@ -18,6 +18,8 @@ drop table if exists tipos_pagamentos;
 
 drop table if exists contas;
 
+drop table if exists contas_encerradas;
+
 drop table if exists hospedes;
 
 drop table if exists apartamentos;
@@ -51,6 +53,7 @@ create table hospedes (
 create table tipos_apartamentos (
     id            int                not    null auto_increment,
     nome         varchar(100)    not    null,
+    lotacao      int    not    null,
     descricao    text            not null,
     valor        float            not null,
     primary key(id)
@@ -114,53 +117,57 @@ create table contas (
     dataEntr    datetime    not null,
     dataSaid    datetime,
     hospede_id     int not null,
-    apartamento_id     int not null,
     primary key(id),
     index (hospede_id),
     foreign key (hospede_id) references hospedes(id)
-    on delete cascade on update cascade,
-    index (apartamento_id),
-    foreign key (apartamento_id) references apartamentos(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
+create table contas_encerradas (
+    id        int        not null,
+    numAcomp    int    not    null,
+    dataEntr    datetime    not null,
+    dataSaid    datetime	not null,
+    hospede_id     int not null,
+    primary key(id),
+    index (hospede_id),
+    foreign key (hospede_id) references hospedes(id)
+    on delete cascade on update cascade
+) ENGINE = InnoDB;
 
 create table contas_pagamentos(
     id    int    not null    auto_increment,
     fkPagamentos    int    not null,
-    fkContas    int    not null,
+    fkContasEncerradas    int    not null,
     primary key(id),
     index (fkPagamentos),
-    index (fkContas),
+    index (fkContasEncerradas),
     foreign key (fkPagamentos) references pagamentos(id)
     on delete cascade on update cascade,
-    foreign key (fkContas) references contas(id)
+    foreign key (fkContasEncerradas) references contas_encerradas(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
 create table contas_apartamentos (
     id    int    not null    auto_increment,
-    fkContas    int    not null,
-    fkApartamentos    int    not null,
+    conta_id    int    not null,
+    apartamento_id    int    not null,
     primary key(id),
-    index (fkContas),
-    index (fkApartamentos),
-    foreign key (fkContas) references contas(id)
+    index (conta_id),
+    index (apartamento_id),
+    foreign key (conta_id) references contas(id)
     on delete cascade on update cascade,
-    foreign key (fkApartamentos) references apartamentos(id)
+    foreign key (apartamento_id) references apartamentos(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
 create table alugueis(
     id    int    not null    auto_increment,
-    conta_id    int    not null,
+    conta_id    int,
     servico_id    int    not null,
     dataHora    datetime    not null,
     primary key(id),
-    index (conta_id),
     index (servico_id),
-    foreign key (conta_id) references contas(id)
-    on delete cascade on update cascade,
     foreign key (servico_id) references servicos(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
