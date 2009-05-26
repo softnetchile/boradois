@@ -1,5 +1,4 @@
 class Apartamento < ActiveRecord::Base
-
 	has_one :conta
 	belongs_to :tipos_apartamentos
 	
@@ -8,12 +7,18 @@ class Apartamento < ActiveRecord::Base
 	validates_numericality_of :num
 
 	def hospedar(hospede,numAcomp,dataEntr)
-		atrib = { :apartamento => self, :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => 'null' }
+		atrib = { :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => 'null' }
 		c = Conta.new(atrib)
 		c.save
 		@conta = c
+
+		atrib2 = { :conta => Conta.find(c.id), :apartamento => self }
+		ca = ContasApartamento.new(atrib2)
+		ca.save
+
 		self.livre=false
 		self.save
+
 	end
 
 	protected

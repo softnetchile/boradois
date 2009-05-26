@@ -21,4 +21,4 @@
 
 <br />
 
-<%= link_to 'Voltar', :controller => "apartamentos", :action => "show", :id => @conta.apartamento.id %>
+<%= link_to 'Voltar', :controller => "apartamentos", :action => "show", :id => ContasApartamento.find(:first, :conditions => ["conta_id = ?", @conta.id] ).apartamento_id %>
