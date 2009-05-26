@@ -17,6 +17,34 @@
     <td width="5%"><%= link_to 'Remover', aluguel, :confirm => 'Você tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
+		
+	<tr class="listLine<%= 1 - par_impar %>"> <td colspan="3">Valor total dos alugueis: 
+		<% total_aluguel = 0
+		for aluguel in @alugueis 
+		valor_aluguel = Servico.find(:first, :conditions => ["id = ?", aluguel.servico_id]).valor	
+		total_aluguel = total_aluguel + valor_aluguel
+		%>
+		<%end%>
+		<b><%= total_aluguel %></b> 
+		reais.</td></tr>
+
+	<tr class="listLine<%= par_impar %>"><td colspan="3">Valor total de diarias: 
+		<% total_diaria = 0
+		for apt in @apts
+		tipo = Apartamento.find(:first, :conditions => ["id = ?", apt.apartamento_id]).tiposApartamento_id
+		valor_diaria = TiposApartamento.find(:first, :conditions => ["id = ?",tipo]).valor
+		total_diaria = total_diaria + valor_diaria
+		%>
+		<%end%>
+		<b><%= total_diaria %></b> 
+		reais.</td></tr>
+
+		
+	<tr class="listLine<%= 1 - par_impar %>"><td colspan="3">Valor total a pagar:
+		<b><%= total_diaria+total_aluguel %></b> reais.</td></tr>
+	</td>	
+		
+		
 </table>
 
 <p>

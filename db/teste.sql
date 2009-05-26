@@ -28,5 +28,5 @@ insert into boradois_development.contas values ('', '1', '2009-05-26', NULL, '1'
 
 insert into boradois_development.contas_apartamentos values ('', '1', '1');
 
-insert into boradois_development.alugueis values ('', '1', '1', '2009-05-26 03:48:06');
-insert into boradois_development.alugueis values ('', '1', '2', '2009-05-26 07:03:01');
+insert into boradois_development.alugueis values ('', '1', '1', '1', '2009-05-26 03:48:06');
+insert into boradois_development.alugueis values ('', '1', '1', '2', '2009-05-26 07:03:01');
