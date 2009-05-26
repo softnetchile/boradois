@@ -1,4 +1,7 @@
 2009-05-26 Suzana Matos <suzana.matos@gmail.com>
+* Just adding all models
+
+2009-05-26 Suzana Matos <suzana.matos@gmail.com>
 * view/contas/encerrar : tried to do.... but it's not working and i don't know how
 to do
 * createTable : change all fk* to *_id

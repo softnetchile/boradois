@@ -28,7 +28,12 @@
 		<%= total_diaria+total_aluguel %>
 	</p>
 	<p>
-	<%=# f.label :tipos_pagamentos, "Tipo pagamento"
+	<%=	# eh preciso escolher o tipo de pagamento e num de parcelas
+		# tem que criar o Pagamento com tais dados e incluir o valor total (acho.... ou então valor de cada parcela, não lembro)
+		# transferir a conta para conta_encerrada, deixar todos os apartamentos que foram alugados livres
+		# e acho que só.....
+		#
+		#f.label :tipos_pagamentos, "Tipo pagamento"
 	%>
 	<br/>
 	<%= #f.select ("tipos_pagamentos", TiposPagamento.all.collect {|t| [t.nome, t.id]}) 
