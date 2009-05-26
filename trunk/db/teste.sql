@@ -24,7 +24,7 @@ insert into boradois_development.tipos_pagamentos values ('', 'Cheque', 'Pagando
 insert into boradois_development.tipos_pagamentos values ('', 'Cartão', 'Pagando em cheque tem direito até 6 prestações.');
 insert into boradois_development.tipos_pagamentos values ('', 'A vista', 'Paga tudo na hora.');
 
-insert into boradois_development.contas values ('', '1', '2009-05-26', NULL, '1');
+insert into boradois_development.contas values ('', '1', '2009-05-26', NULL, '1',false);
 
 insert into boradois_development.contas_apartamentos values ('', '1', '1');
 

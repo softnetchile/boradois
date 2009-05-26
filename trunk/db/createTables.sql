@@ -117,6 +117,7 @@ create table contas (
     dataEntr    datetime    not null,
     dataSaid    datetime,
     hospede_id     int not null,
+    encerrada  boolean  default false,
     primary key(id),
     index (hospede_id),
     foreign key (hospede_id) references hospedes(id)
