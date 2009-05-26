@@ -1,5 +1,5 @@
 class Reserva < ActiveRecord::Base
-	validates_presence_of :fkHospedes, :fkTiposApartamentos
+	validates_presence_of :hospede_id, :tiposApartamento_id
 	validate :okToReserve 
 	belongs_to :tipos_apartamentos
 	belongs_to :hospedes
@@ -11,8 +11,8 @@ class Reserva < ActiveRecord::Base
 
 	def okToReserve
 		if dataEntrada <= dataSaida
-			@totalAp=Apartamento.count(:conditions => ["fkTiposApartamentos = ?",fkTiposApartamentos])
-			@ocupados=Reserva.count(:conditions => ["fkTiposApartamentos = ? AND (( dataSaida <= ? AND dataSaida >= ? ) OR (dataEntrada <= ? AND dataEntrada >= ? ))", fkTiposApartamentos, dataSaida, dataEntrada, dataSaida, dataEntrada])
+			@totalAp=Apartamento.count(:conditions => ["tiposApartamento_id = ?",tiposApartamento_id])
+			@ocupados=Reserva.count(:conditions => ["tiposApartamento_id = ? AND (( dataSaida <= ? AND dataSaida >= ? ) OR (dataEntrada <= ? AND dataEntrada >= ? ))", tiposApartamento_id, dataSaida, dataEntrada, dataSaida, dataEntrada])
 			if @ocupados >= @totalAp
 				errors.add("Não existe vaga")
 			end

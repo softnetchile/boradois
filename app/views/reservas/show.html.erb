@@ -1,11 +1,11 @@
 <p>
   <b>Hospede:</b>
-  <%=h Hospede.find(@reserva.fkHospedes).nome %>
+  <%=h Hospede.find(@reserva.hospede_id).nome %>
 </p>
 
 <p>
   <b>Tipo de apartamento:</b>
-  <%=h TiposApartamento.find(@reserva.fkTiposApartamentos).nome %>
+  <%=h TiposApartamento.find(@reserva.tiposApartamento_id).nome %>
 </p>
 <p>
   <b>Data de entrada:</b>

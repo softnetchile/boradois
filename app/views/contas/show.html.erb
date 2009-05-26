@@ -19,6 +19,7 @@
 <% end %>
 </table>
 
-<br />
-
+<p>
+	<%= link_to 'Encerrar', :action => "encerrar", :id => @conta.id %>
+</p>
 <%= link_to 'Voltar', :controller => "apartamentos", :action => "show", :id => ContasApartamento.find(:first, :conditions => ["conta_id = ?", @conta.id] ).apartamento_id %>

@@ -13,7 +13,7 @@
 	par_impar = 1 - par_impar %>
   <tr class="listLine<%= par_impar %>">
     <td><%=h apartamento.num %></td>
-    <td><%=h TiposApartamento.find(apartamento.fkTiposApartamentos).nome %></td>
+    <td><%=h TiposApartamento.find(apartamento.tiposApartamento_id).nome %></td>
     <%if apartamento.livre-%>
     	<td>Livre</td>
     <%else -%>

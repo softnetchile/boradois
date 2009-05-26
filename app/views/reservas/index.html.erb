@@ -13,8 +13,8 @@
   for reserva in @reservas 
 	par_impar = 1 - par_impar %>
   <tr class="listLine<%= par_impar %>">
-    <td><%=h Hospede.find(reserva.fkHospedes).nome %></td>
-    <td><%=h TiposApartamento.find(reserva.fkTiposApartamentos).nome %></td>
+    <td><%=h Hospede.find(reserva.hospede_id).nome %></td>
+    <td><%=h TiposApartamento.find(reserva.tiposApartamento_id).nome %></td>
     <td><%=h reserva.dataEntrada %></td>
     <td><%=h reserva.dataSaida %></td>
     <td width="5%"><%= link_to 'Exibir', reserva %></td>

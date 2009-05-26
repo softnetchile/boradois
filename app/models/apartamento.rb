@@ -2,7 +2,7 @@ class Apartamento < ActiveRecord::Base
 	has_one :conta
 	belongs_to :tipos_apartamentos
 	
-	validates_presence_of :num, :fkTiposApartamentos
+	validates_presence_of :num, :tiposApartamento_id
 	validates_uniqueness_of :num
 	validates_numericality_of :num
 
