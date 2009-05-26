@@ -42,7 +42,7 @@ class AlugueisController < ApplicationController
   # POST /alugueis.xml
   def create
 	@apartamento_id = params[:aluguel][:apartamento]
-	@conta_id = ContasApartamento.find(:first, :conditions => ["apartamento_id = ?",@apartamento_id]).conta_id
+	@conta_id = ContasApartamento.find(:last, :conditions => ["apartamento_id = ?",@apartamento_id]).conta_id
 
 	params[:aluguel][:apartamento] = Apartamento.find(@apartamento_id)
 	params[:aluguel][:conta] = Conta.find(@conta_id)
