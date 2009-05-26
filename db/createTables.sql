@@ -18,8 +18,6 @@ drop table if exists tipos_pagamentos;
 
 drop table if exists contas;
 
-drop table if exists contas_encerradas;
-
 drop table if exists hospedes;
 
 drop table if exists apartamentos;
@@ -124,28 +122,16 @@ create table contas (
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 
-create table contas_encerradas (
-    id        int        not null,
-    numAcomp    int    not    null,
-    dataEntr    datetime    not null,
-    dataSaid    datetime	not null,
-    hospede_id     int not null,
-    primary key(id),
-    index (hospede_id),
-    foreign key (hospede_id) references hospedes(id)
-    on delete cascade on update cascade
-) ENGINE = InnoDB;
-
 create table contas_pagamentos(
     id    int    not null    auto_increment,
     pagamento_id    int    not null,
-    contasEncerrada_id    int    not null,
+    conta_id    int    not null,
     primary key(id),
     index (pagamento_id),
-    index (contasEncerrada_id),
+    index (conta_id),
     foreign key (pagamento_id) references pagamentos(id)
     on delete cascade on update cascade,
-    foreign key (contasEncerrada_id) references contas_encerradas(id)
+    foreign key (conta_id) references contas(id)
     on delete cascade on update cascade
 ) ENGINE = InnoDB;
 

@@ -1,0 +1,11 @@
+<h1> Contas <%=h @estado_conta %></h1>
+
+<%
+	for conta in @contas
+%>
+<%=h conta.hospede.nome %> |
+<%= link_to 'conta', :controller => "contas", :action => "show", :id => conta.id %>
+<br />
+<%
+	end
+%>
