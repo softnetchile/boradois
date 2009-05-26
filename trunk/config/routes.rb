@@ -11,7 +11,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :hospedes
 
+  map.connect '/contas/view', :controller => 'contas', :action => 'view'
   map.resources :contas
+
 
   map.resources :alugueis
 
