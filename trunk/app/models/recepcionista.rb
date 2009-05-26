@@ -17,7 +17,7 @@ class Recepcionista < ActiveRecord::Base
 
 	def self.login(login, password)
 		hashed_password = hash_password(password || "")
-		find(:first, :conditions => ["login = ? and password = ?", login, hashed_password])
+		find(:last, :conditions => ["login = ? and password = ?", login, hashed_password])
 	end
 
 	def try_to_login
