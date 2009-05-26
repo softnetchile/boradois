@@ -6,8 +6,6 @@ class Apartamento < ActiveRecord::Base
 	validates_uniqueness_of :num
 	validates_numericality_of :num
 
-	@livre
-
 	def hospedar(hospede,numAcomp,dataEntr)
 		atrib = { :hospede => Hospede.find(hospede), :numAcomp => numAcomp, :dataEntr => dataEntr, :dataSaid => 'null', :encerrada => false }
 		c = Conta.new(atrib)
@@ -18,7 +16,7 @@ class Apartamento < ActiveRecord::Base
 		ca = ContasApartamento.new(atrib2)
 		ca.save
 
-		@livre=false
+		self.livre=false
 		self.save
 
 	end
