@@ -10,6 +10,9 @@ class Reserva < ActiveRecord::Base
 
 
 	def okToReserve
+		if dataEntrada < Date.today
+			errors.add("Coloque uma data de hoje em diante")
+		end
 		if dataEntrada <= dataSaida
 			@totalAp=Apartamento.count(:conditions => ["tiposApartamento_id = ?",tiposApartamento_id])
 			@ocupados=Reserva.count(:conditions => ["tiposApartamento_id = ? AND (( dataSaida <= ? AND dataSaida >= ? ) OR (dataEntrada <= ? AND dataEntrada >= ? ))", tiposApartamento_id, dataSaida, dataEntrada, dataSaida, dataEntrada])
