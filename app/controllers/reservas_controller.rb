@@ -5,16 +5,16 @@ class ReservasController < ApplicationController
   # GET /reservas
   # GET /reservas.xml
   def index
-	unless session[:admin]
-		redirect_to :controller => "cliente", :action => "login"
+	if session[:admin]
+		@reservas = Reserva.find(:all, :order => "dataEntrada, dataSaida, tiposApartamento_id, hospede_id")
+	elsif session[:cliente]	
+		@reservas = Reserva.find(:all, :conditions =>["hospede_id =?", session[:id]], :order => "dataEntrada, dataSaida, tiposApartamento_id, hospede_id")
 	else
-
-    @reservas = Reserva.find(:all, :order => "dataEntrada, dataSaida, tiposApartamento_id, hospede_id")
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @reservas }
-    end
+		redirect_to :controller => "cliente", :action => "login"
+	end	
+	respond_to do |format|
+		format.html # index.html.erb
+		format.xml  { render :xml => @reservas }
 	end
   end
 
