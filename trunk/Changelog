@@ -1,4 +1,7 @@
-2009-06-17 Suzana Matos <suzana.matos@gmail.com>
+2009-06-14 Iuri Fernandes <iurifq@gmail.com>
+* "Consulta 4" done
+
+2009-06-14 Suzana Matos <suzana.matos@gmail.com>
 * application controller : added authorize of cliente
 * cliente : created menu, controller and view
 * hospede : 
