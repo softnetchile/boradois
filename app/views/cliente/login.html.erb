@@ -1,0 +1,18 @@
+<% @page_title = "Login" -%>
+<h1>Login</h1>
+<%= error_messages_for 'hospede' %>
+<% form_tag do %>
+<table>
+	<tr>
+		<td>Login:</td>
+		<td><%= text_field("hospede", "login") %></td>
+	</tr>
+	<tr>
+		<td>Senha:</td>
+		<td><%= password_field("hospede", "password") %></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><input type="submit" value="Login" /></td>
+	</tr>
+</table>
+<% end %>

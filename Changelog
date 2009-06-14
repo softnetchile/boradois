@@ -1,4 +1,15 @@
-2009-05-26 Suzana Matos <suzana.matos@gmail.com>
+2009-06-17 Suzana Matos <suzana.matos@gmail.com>
+* application controller : added authorize of cliente
+* cliente : created menu, controller and view
+* hospede : 
+	- added login, password and email in DB 
+	- added some functions to validate and login
+* reserva : 
+	- changed the way to 'authorize'
+	- fixed all views to show the right thing to client and admin
+* tipo_apartamento : every one can see
+
+2009-06-13 Suzana Matos <suzana.matos@gmail.com>
 * reservas : fixed.
 	- you can't reserve in a day before today
 

@@ -2,11 +2,14 @@
 
 <% form_for(@reserva) do |f| %>
   <%= f.error_messages %>
-
+<% if session[:admin] %>
   <p>
     <%= f.label :hospede %><br />
     <%= f.select("hospede_id", Hospede.find(:all, :order => "nome").collect {|h| [ h.nome, h.id ] }, {}) %>
   </p>
+<% else %>
+    <%= f.hidden_field "hospede_id", :value => session[:id] %>
+<% end %>
   <p>
     <%= f.label :tiposApartamento_id, "Tipo de apartamento"%><br />
     <%= f.select("tiposApartamento_id", TiposApartamento.all.collect {|t| [ t.nome, t.id ] }, {}) %>
@@ -23,5 +26,6 @@
     <%= f.submit "Inserir" %>
   </p>
 <% end %>
-
+<% if session[:admin] %>
 <%= link_to 'Voltar', reservas_path %>
+<% end %>

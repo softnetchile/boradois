@@ -18,5 +18,7 @@
 </p>
 
 
-<%= link_to 'Editar', edit_reserva_path(@reserva) %> |
-<%= link_to 'Voltar', reservas_path %>
+<%= link_to 'Editar', edit_reserva_path(@reserva) %> 
+<% if session[:admin] %>
+| <%= link_to 'Voltar', reservas_path %>
+<% end %>

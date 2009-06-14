@@ -1,6 +1,6 @@
 class TiposApartamentosController < ApplicationController
   layout 'layout'
-  before_filter :authorize
+#  before_filter :authorize
 
   # GET /tipos_apartamentos
   # GET /tipos_apartamentos.xml

@@ -24,6 +24,8 @@ drop table if exists apartamentos;
 
 drop table if exists tipos_apartamentos;
 
+drop table if exists usuarios;
+
 
 create table recepcionistas (
     id            int                not    null auto_increment,
@@ -45,6 +47,9 @@ create table hospedes (
     pais        varchar(50)        not null,
     sexo        ENUM('Masculino', 'Feminino')    not null,
     estCivil    ENUM('Casado', 'Solteiro', 'Divorciado', 'Viuvo')    not null,
+    email	varchar(50),
+    login        varchar(30)        not null,
+    password    varchar(50)        not null,
     primary key(id)
 ) ENGINE = InnoDB;
 

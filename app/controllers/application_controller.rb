@@ -21,4 +21,12 @@ class ApplicationController < ActionController::Base
 	end
   end
 
+  def authorize_cliente
+	unless session[:cliente]
+	   flash[:notice] = "Please lot in"
+	   session[:jumpto] = request.parameters
+	   redirect_to(:controller => "cliente", :action => "login")
+	end
+  end
+
 end
