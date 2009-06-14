@@ -1,0 +1,16 @@
+<h1>Consultas</h1>
+<%
+  unless @taxa_ocupacao
+	form_tag :action => "con1" do
+%>
+<%= date_select("post","data") %>
+<br />
+<input type="submit" value="Consultar" />
+<%	end %>
+<% else %>
+<p>
+<%= 100*@taxa_ocupacao %>%
+</p>
+<% end %>
+
+<br />
