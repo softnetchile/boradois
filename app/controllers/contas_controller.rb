@@ -19,6 +19,7 @@ class ContasController < ApplicationController
 	@apts = ContasApartamento.find(:all, :conditions => ["conta_id = ?", @conta.id])
 
 	@conta.encerrada = true
+	@conta.dataSaid = DateTime.now
 	@conta.save
 	for ap in @apts
 		apt=ap.apartamento
