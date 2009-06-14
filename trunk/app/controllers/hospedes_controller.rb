@@ -1,6 +1,6 @@
 class HospedesController < ApplicationController
   layout 'layout'
-  before_filter :authorize
+  before_filter :authorize, :except => [:new, :create]
 
   # GET /hospedes
   # GET /hospedes.xml
@@ -47,9 +47,14 @@ class HospedesController < ApplicationController
 
     respond_to do |format|
       if @hospede.save
+	if session[:admin]
         flash[:notice] = 'Hospede inserido com sucesso.'
         format.html { redirect_to(@hospede) }
         format.xml  { render :xml => @hospede, :status => :created, :location => @hospede }
+	else
+		flash[:notice] = 'Cadastrado com sucesso. Estamos lhe enviando um email de confirmação'
+		format.html {redirect_to "/" }
+	end
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @hospede.errors, :status => :unprocessable_entity }

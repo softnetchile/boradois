@@ -1,4 +1,8 @@
+<% if session[:admin] %>
 <h1>Inserindo hospede</h1>
+<% else %>
+<h1>Cadastro</h1>
+<% end %>
 
 <% form_for(@hospede) do |f| %>
   <%= f.error_messages %>
@@ -44,4 +48,6 @@
   </p>
 <% end %>
 
+<% if session[:admin] %>
 <%= link_to 'Voltar', hospedes_path %>
+<% end %>
