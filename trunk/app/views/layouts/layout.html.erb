@@ -19,7 +19,11 @@
 		<%= if session[:admin]
 			yield(:menu_admin) || render(:partial => 'shared/menu_admin') 
 		    else
-			yield(:menu) || render(:partial => 'shared/menu')
+			if session[:cliente]
+				yield(:menu_cliente) || render(:partial => 'shared/menu_cliente') 
+			else
+				yield(:menu) || render(:partial => 'shared/menu')
+			end
 		    end 
 		%>
 	</div>

@@ -28,6 +28,16 @@
   <%=h @hospede.estCivil %>
 </p>
 
+<p>
+  <b>E-mail:</b>
+  <%=h @hospede.email %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%=h @hospede.login %>
+</p>
+
 
 <%= link_to 'Editar', edit_hospede_path(@hospede) %> |
 <%= link_to 'Voltar', hospedes_path %>

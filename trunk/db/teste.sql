@@ -1,9 +1,9 @@
 insert into boradois_development.recepcionistas (login,password) values ("suzana", SHA1("suzana"));
 insert into boradois_development.recepcionistas (login,password) values ("iuri", SHA1("iuri"));
 
-insert into boradois_development.hospedes values ('', 'João Maria', 'Rua Silva e Silva', '1974-04-01', 'Brasil', 'Masculino', 'Solteiro');
-insert into boradois_development.hospedes values ('', 'Maria João', 'Rua São Vicente', '1983-07-23', 'Brasil', 'Feminino', 'Viuvo');
-insert into boradois_development.hospedes values ('', 'Samara Simão', 'Rua Carucaru', '1970-12-15', 'Brasil', 'Feminino', 'Solteiro');
+insert into boradois_development.hospedes values ('', 'João Maria', 'Rua Silva e Silva', '1974-04-01', 'Brasil', 'Masculino', 'Solteiro','joao.maria2004@gmail.com', 'joao_maria', SHA1("jo$ao4002K"));
+insert into boradois_development.hospedes values ('', 'Maria João', 'Rua São Vicente', '1983-07-23', 'Brasil', 'Feminino', 'Viuvo','','mariazinha', SHA1("coelhinho"));
+insert into boradois_development.hospedes values ('', 'Samara Simão', 'Rua Carucaru', '1970-12-15', 'Brasil', 'Feminino', 'Solteiro', 'samarainhazinha@gmail.com', 'simao.samara', SHA1('o&chamad0'));
 
 insert into boradois_development.tipos_apartamentos values ('', 'Luxo', '5', 'Espaçoso com vista para o mar.', '50.0');
 insert into boradois_development.tipos_apartamentos values ('', 'Presidencial', '7', 'Muito espaçoso com vista para o mar, banheira.', '100.0');
