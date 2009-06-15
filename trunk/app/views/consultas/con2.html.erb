@@ -1,13 +1,18 @@
 <h1>Consultas</h1>
-
+<p>Qual a evolução do valor faturado pelo hotel nos três últimos meses?</p>
 <p>
+Um mes atras: 
 <%= @total1 %>
 </p>
 <p>
+Dois meses atras: 
 <%= @total2 %>
 </p>
 <p>
+Três meses atras:
 <%= @total3 %>
 </p>
 
-<br />
+<p>
+<%= link_to 'Voltar', :controller => "consultas", :action => "index" %>
+</p>

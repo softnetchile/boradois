@@ -1,16 +1,21 @@
 <h1>Consultas</h1>
+<p>Qual a taxa de ocupação do hotel na data X?</p>
 <%
   unless @taxa_ocupacao
 	form_tag :action => "con1" do
 %>
-<%= date_select("post","data") %>
+
+<p>Escolha a data: </p> 
+<%= date_select("post","data", :end_year => Time.now.year, :start_year => Time.now.year-10, :use_month_names => Hospede.meses) %>
+<br />
 <br />
 <input type="submit" value="Consultar" />
 <%	end %>
 <% else %>
-<p>
-<%= 100*@taxa_ocupacao %>%
+<p> Taxa de ocupação de 
+<b><%= 100*@taxa_ocupacao %>%</b>
 </p>
 <% end %>
-
-<br />
+<p>
+<%= link_to 'Voltar', :controller => "consultas", :action => "index" %>
+</p>
