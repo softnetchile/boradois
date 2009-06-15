@@ -61,4 +61,22 @@ class ConsultasController < ApplicationController
     end
   end
 
+  def con3
+	if request.post?
+		conta = Conta.find(:last, :conditions => ["hospede_id = ? and encerrada = false",params[:hospede][:id]])
+		
+		if conta
+			@apts = Apartamento.find(		:all,
+								:joins => "inner join contas_apartamentos as a on apartamentos.id=a.apartamento_id",
+								:conditions => ["a.conta_id = ?",conta.id])
+		else
+			flash[:notice]="Conta Nula"
+		end
+	end
+    respond_to do |format|
+      format.html # con3.html.erb
+      format.xml  { render :xml }
+    end
+  end
+
 end
