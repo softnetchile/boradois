@@ -49,18 +49,6 @@ class ConsultasController < ApplicationController
 	end
   end
 
-  def con4
-	@totais = Aluguel.find(	:all,
-							:conditions => ["dataHora >= ?", Time.now.beginning_of_month ],
-							:joins => "as b inner join servicos as a on b.servico_id = a.id ",
-							:select => "a.id as servico_id, a.nome as nome, sum(a.valor) as total",
-							:group => "servico_id", :order => "total DESC")
-    respond_to do |format|
-      format.html # con4.html.erb
-      format.xml  { render :xml }
-    end
-  end
-
   def con3
 	if request.post?
 		conta = Conta.find(:last, :conditions => ["hospede_id = ? and encerrada = false",params[:hospede][:id]])
@@ -75,6 +63,18 @@ class ConsultasController < ApplicationController
 	end
     respond_to do |format|
       format.html # con3.html.erb
+      format.xml  { render :xml }
+    end
+  end
+
+  def con4
+	@totais = Aluguel.find(	:all,
+							:conditions => ["dataHora >= ? and dataHora <= ?", 1.month.ago.beginning_of_month,1.month.ago.end_of_month],
+							:joins => "as b inner join servicos as a on b.servico_id = a.id ",
+							:select => "a.id as servico_id, a.nome as nome, sum(a.valor) as total",
+							:group => "servico_id", :order => "total DESC")
+    respond_to do |format|
+      format.html # con4.html.erb
       format.xml  { render :xml }
     end
   end
