@@ -33,7 +33,8 @@
 		for apt in @apts
 		tipo = Apartamento.find(:last, :conditions => ["id = ?", apt.apartamento_id]).tiposApartamento_id
 		valor_diaria = TiposApartamento.find(:last, :conditions => ["id = ?",tipo]).valor
-		total_diaria = total_diaria + valor_diaria
+		dias = Date.today - @conta.dataEntr.to_date
+		total_diaria = total_diaria + valor_diaria*dias
 		%>
 		<%end%>
 		<b><%= total_diaria %></b> 

@@ -16,6 +16,13 @@ class Apartamento < ActiveRecord::Base
 		ca = ContasApartamento.new(atrib2)
 		ca.save
 
+		reserva = Reserva.find(:first, :conditions => ["(hospede_id = ? and dataEntrada =? and tiposApartamento_id = ?)",hospede,dataEntr.to_date, self.tiposApartamento_id])
+		if reserva
+			
+			Reserva.delete(reserva.id)
+			#flash[:notice] = "Reserva concretizada."
+		end
+
 		self.livre=false
 		self.save
 
