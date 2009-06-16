@@ -28,21 +28,22 @@ class ConsultasController < ApplicationController
       format.xml  { render :xml }
     end
   end
+
   def con2
 	contas1 = Conta.find(	:all,
-							:conditions => ["encerrada and dataSaid >= ? and dataSaid <= ?",1.month.ago.beginning_of_month,1.month.ago.end_of_month])
+							:conditions => ["encerrada = true and dataSaid >= ? and dataSaid <= ?",1.month.ago.beginning_of_month,1.month.ago.end_of_month])
 	@total1 = 0
 	for conta in contas1
 		@total1 = conta.total + @total1
 	end
 	contas2 = Conta.find(	:all,
-							:conditions => ["encerrada and dataSaid >= ? and dataSaid <= ?",2.month.ago.beginning_of_month,2.month.ago.end_of_month])
+							:conditions => ["encerrada = true and dataSaid >= ? and dataSaid <= ?",2.month.ago.beginning_of_month,2.month.ago.end_of_month])
 	@total2 = 0
 	for conta in contas2
 		@total2 = conta.total + @total2
 	end
 	contas3 = Conta.find(	:all,
-							:conditions => ["encerrada and dataSaid >= ? and dataSaid <= ?",3.month.ago.beginning_of_month,3.month.ago.end_of_month])
+							:conditions => ["encerrada = true and dataSaid >= ? and dataSaid <= ?",3.month.ago.beginning_of_month,3.month.ago.end_of_month])
 	@total3 = 0
 	for conta in contas3
 		@total3 = conta.total + @total3

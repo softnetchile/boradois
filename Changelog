@@ -1,3 +1,7 @@
+2009-06-14 Iuri Fernandes <iurifq@gmail.com>
+* Fixed bug in "consulta 2"
+* Fixed bug in total of conta
+
 2009-06-14 Suzana Matos <suzana.matos@gmail.com>
 * Deleted reserva if it exist, in hospedar
 * Fixed the price in conta

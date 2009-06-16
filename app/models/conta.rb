@@ -20,7 +20,8 @@ class Conta < ActiveRecord::Base
 
 		for apt in apts
 			tipo = Apartamento.find(:last, :conditions => ["id = ?", apt.apartamento_id]).tiposApartamento_id
-			valor_diaria = TiposApartamento.find(:last, :conditions => ["id = ?",tipo]).valor
+			dias = dataSaid.to_date - dataEntr.to_date + 1
+			valor_diaria = dias*TiposApartamento.find(:last, :conditions => ["id = ?",tipo]).valor
 			total_diaria = total_diaria + valor_diaria
 		end
 		return total_aluguel + total_diaria
