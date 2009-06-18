@@ -52,14 +52,20 @@ class ConsultasController < ApplicationController
 
   def con3
 	if request.post?
-		conta = Conta.find(:last, :conditions => ["hospede_id = ? and encerrada = false",params[:hospede][:id]])
-		
-		if conta
-			@apts = Apartamento.find(		:all,
-								:joins => "inner join contas_apartamentos as a on apartamentos.id=a.apartamento_id",
-								:conditions => ["a.conta_id = ?",conta.id])
-		else
-			flash[:notice]="Conta Nula"
+		@hospedes = Hospede.find(:all, :conditions => ["nome LIKE ?",params[:hospede][:nome]+"%"])
+		for hospede in @hospedes
+			conta = Conta.find(:last, :conditions => ["hospede_id = ? and encerrada = false",hospede.id])
+			if conta
+				@apts = Hash.new
+				@apts[hospede.id] = Apartamento.find(	:all,
+											:joins => "inner join contas_apartamentos as a on apartamentos.id=a.apartamento_id",
+											:conditions => ["a.conta_id = ?",conta.id])
+			else
+				@hospedes.delete hospede
+			end
+		end
+		if @hospedes.size <= 0
+			flash[:notice]="Esse hospede não existe ou não está hospedado em nenhum quarto"
 		end
 	end
     respond_to do |format|
