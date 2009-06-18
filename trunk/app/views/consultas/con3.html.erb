@@ -1,26 +1,29 @@
 <h1>Consultas</h1>
 <p>Em qual apartamento está o hospede X?</p>
 <%
-  unless @apts
+  unless @hospedes
 	form_tag :action => "con3" do
 %>
   <p>
     <%= label_tag :hospede_id, "Escolha o hospede" %><br />
-    <%= select("hospede","id", Hospede.find(:all, :order => "nome").collect {|h| [ h.nome, h.id ] }, {}) %>
+    <%= text_field :hospede, :nome %>
   </p>
 <br />
 <input type="submit" value="Consultar" />
 
 <% end %>
 <% else %>
-Lista de apartamentos que o hospede alugou: 
-<%	for apt in @apts %>
+<% if @hospedes.size > 0 %>
+Lista de possíveis hospedes: 
+<%	for hospede in @hospedes %>
 <p>
-- 
-<% apartamento = "Apartamento ".concat(apt.num.to_s) %>
-<%= link_to apartamento, :controller => "apartamentos", :action => "show", :id => apt.id  %>
+<%= hospede.nome  %> - apts
+<% for apt in @apts[hospede.id] %>
+<%= apt.num %>
+<% end %>
 </p>
-<%	end %>
+<% end %>
+<% end %>
 <% end %>
 
 <p>
